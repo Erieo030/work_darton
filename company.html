@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>企業官網</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script src="tailwind-config.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Header(上半部) -->
+  <header class="bg-white border-b sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+  
+      <!-- Logo -->
+      <a href="index.html" class="nav-link text-slate-700 hover:text-blue-600 transition">
+        COMPANY
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-10 text-sm font-medium h-full items-center">
+  
+        <div class="group h-full flex items-center">
+          <a href="about.html" class="nav-link text-slate-700 hover:text-blue-600 transition flex items-center">
+            關於大肚工業
+            <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+          </a>
+      
+          <div class="absolute left-0 top-20 w-full bg-slate-600 text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 shadow-xl">
+            <div class="max-w-7xl mx-auto px-10 py-12 grid grid-cols-4 gap-8">
+              
+              <div class="border-l border-slate-500 pl-6">
+                <h4 class="font-bold mb-4 text-lg border-b border-slate-500 pb-2">大肚工業</h4>
+                <ul class="space-y-3 text-slate-300">
+                  <li><a href="#" class="hover:text-white transition">公司簡介</a></li>
+                  <li><a href="#" class="hover:text-white transition">企業願景 ?</a></li>
+                  <li><a href="#" class="hover:text-white transition">核心競爭力 ?</a></li>
+                  <li><a href="#" class="hover:text-white transition">關係企業 ?</a></li>
+                </ul>
+              </div>
+      
+              <div class="border-l border-slate-500 pl-6">
+                <h4 class="font-bold mb-4 text-lg border-b border-slate-500 pb-2">新聞中心</h4>
+                <ul class="space-y-3 text-slate-300">
+                  <li><a href="#" class="hover:text-white transition">最新消息</a></li>
+                  <li><a href="#" class="hover:text-white transition">常見問題</a></li>
+                </ul>
+              </div>
+      
+              <div class="border-l border-slate-500 pl-6">
+                <h4 class="font-bold mb-4 text-lg border-b border-slate-500 pb-2">永續經營 ?</h4>
+                <ul class="space-y-3 text-slate-300">
+                  <li><a href="#" class="hover:text-white transition">ESG政策與目標 ?</a></li>
+                  <li><a href="#" class="hover:text-white transition">環境保護與社會責任 ?</a></li>
+                  <li><a href="#" class="hover:text-white transition">國際品質認證 ?</a></li>
+                </ul>
+              </div>
+      
+              <div class="border-l border-slate-500 pl-6">
+                <h4 class="font-bold mb-4 text-lg border-b border-slate-500 pb-2">全球據點 ?</h4>
+                <ul class="space-y-3 text-slate-300">
+                  <li><a href="#" class="hover:text-white transition">全球佈局概況 ?</a></li>
+                </ul>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+        
+        <div class="group h-full flex items-center">
+            <a href="service.html" class="nav-link text-slate-700 hover:text-blue-600 transition flex items-center">
+                產品服務
+              <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+            </a>
+        
+            <div class="absolute left-0 top-20 w-full bg-slate-600 text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 shadow-xl">
+                <div class="max-w-7xl mx-auto px-10 py-12">
+                    
+                    <div class="border-l border-slate-500 pl-6 mb-6">
+                        <h4 class="font-bold text-lg border-b border-slate-500 pb-2 inline-block">製品系列組件</h4>
+                    </div>
+            
+                    <div class="grid grid-cols-4 gap-8 pl-6">
+                        <ul class="space-y-3 text-slate-300">
+                            <li><a href="#" class="hover:text-white transition">碳化矽薄板製品系列</a></li>
+                            <li><a href="#" class="hover:text-white transition">碳化矽製品系列</a></li>
+                        </ul>
+            
+                        <ul class="space-y-3 text-slate-300">
+                            <li><a href="#" class="hover:text-white transition">碳化矽異形製品系列</a></li>
+                            <li><a href="#" class="hover:text-white transition">三明治製品系列</a></li>
+                        </ul>
+            
+                        <ul class="space-y-3 text-slate-300">
+                            <li><a href="#" class="hover:text-white transition">堇青石製品系列</a></li>
+                        </ul>
+            
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        
+        
+        
+        </div>
+
+        <a href="contact.html" class="nav-link text-slate-700 hover:text-blue-600 transition">聯絡我們</a>
+      </nav>
+  
+      <!-- Mobile Menu Button -->
+      <button id="menuBtn" class="md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-800" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden fixed top-20 right-0 w-full bg-white shadow-2xl z-[60] transform translate-x-full transition-transform duration-300 ease-in-out h-[calc(100vh-80px)]">
+        <nav class="px-6 py-8 space-y-2 overflow-y-auto h-full">
+          
+          <div class="border-b border-gray-100">
+            <button onclick="toggleMobileSub('aboutContent', 'aboutArrow')" class="flex items-center justify-between w-full py-4 text-lg font-bold text-slate-800">
+                關於我們
+                <svg id="aboutArrow" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+      
+            <div id="aboutContent" class="hidden pb-6 space-y-6 pl-4 border-l-2 border-hota-green/30">
+              <div>
+                <p class="text-hota-green font-bold text-sm mb-2">xxx集團</p>
+                <ul class="space-y-3 text-slate-600">
+                  <li><a href="#" class="block py-1">集團簡介</a></li>
+                  <li><a href="#" class="block py-1">企業願景</a></li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-hota-green font-bold text-sm mb-2">新聞中心</p>
+                <ul class="space-y-3 text-slate-600">
+                  <li><a href="#" class="block py-1">最新消息</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <a href="service.html" class="block py-4 text-lg font-bold text-slate-800 border-b border-gray-100">
+            產品服務
+          </a>
+    
+          <a href="contact.html" class="block py-4 text-lg font-bold text-slate-800 border-b border-gray-100">
+            聯絡我們
+          </a>
+          
+        </nav>
+    </div>
+    
+    <div id="menuOverlay" class="fixed top-20 inset-0 bg-black/50 z-[55] hidden opacity-0 transition-opacity duration-300"></div>
+    
+    <!-- 可能不重要<div id="menuOverlay" class="fixed inset-0 bg-black/50 z-[55] hidden transition-opacity duration-300 opacity-0"></div> -->
+
+  </header>
+  
+  <main> 
+  <section class="relative h-[40vh] bg-slate-800 flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 opacity-40">
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80" alt="About" class="w-full h-full object-cover">
+    </div>
+    <div class="relative z-10 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white tracking-widest">關於我們</h1>
+      <p class="text-slate-300 mt-4 tracking-wider">ABOUT US</p>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-6 py-20">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <div class="md:w-1/2 space-y-6">
+        <h2 class="text-3xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4">公司簡介</h2>
+        <p class="text-slate-600 leading-loose">
+          大度工業股份有限公司於 1983 年創立於台灣、桃園，成立以來一直是高品質耐火材料的創意設計及製造廠商， 2004 年通過 ISO 9001: 2000 認證。
+        </p>
+        <p class="text-slate-600 leading-loose">
+          累積超過30 年的經驗生產特殊耐火材料。基於過去經驗的累積，大度不斷提升生產的技術及產品的研發與設計，提供市場最優良的功能性耐火材料，以符合客戶不斷更新的需求，經由品質上的優勢和客戶導向策略的應用為客戶帶來最大的效益，現在大度工業股份有限公司已經成為世界上最主要的特殊耐火材料供應商之一。
+        </p>
+        <p class="text-slate-600 leading-loose">
+          我們的目標在於持續生產高品質、高信賴度、高價值的產品及協助客戶使用本公司的產品時能夠提升產品的品質、增加產能、節省能源、以及降低成本。
+        </p>
+      </div>
+      <div class="md:w-1/2">
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80" class="rounded-lg shadow-2xl w-full" alt="Factory">
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-slate-50 py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-bold text-slate-800">經營理念</h2>
+        <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 bg-blue-100 text-blue-600 flex items-center justify-center rounded-full mb-6 text-xl">
+            <i class="fas fa-gem"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">卓越品質</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">追求零缺陷的產品品質，落實全面品質管理系統，滿足客戶需求。</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 bg-blue-100 text-blue-600 flex items-center justify-center rounded-full mb-6 text-xl">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">持續創新</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">不斷研發新製程與自動化設備，維持產業領先地位。</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+          <div class="w-12 h-12 bg-blue-100 text-blue-600 flex items-center justify-center rounded-full mb-6 text-xl">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-4">永續經營</h3>
+          <p class="text-slate-500 text-sm leading-relaxed">友善環境，善盡企業社會責任，與全球夥伴共創價值。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+  
+  <section class="max-w-7xl mx-auto px-6 py-20">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-slate-800">企業沿革</h2>
+      <div class="w-16 h-1 bg-hota-green mx-auto mt-4"></div>
+    </div>
+  
+    <div class="swiper timelineSwiper relative">
+      <div class="swiper-wrapper mb-20">
+        
+        <div class="swiper-slide group cursor-pointer" onclick="updateTimeline(0)">
+          <div class="relative flex flex-col items-center">
+            <span class="year-text text-3xl font-bold text-slate-300 group-hover:text-hota-green transition-colors duration-300">1983</span>
+            <div class="relative w-full flex items-center justify-center mt-6">
+              <div class="h-[2px] bg-slate-200 w-full absolute"></div> <div class="dot w-4 h-4 rounded-full bg-slate-300 z-10 border-4 border-white transition-all duration-300"></div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="swiper-slide group cursor-pointer" onclick="updateTimeline(1)">
+          <div class="relative flex flex-col items-center">
+            <span class="year-text text-3xl font-bold text-slate-300">1986</span>
+            <div class="relative w-full flex items-center justify-center mt-6">
+              <div class="h-[2px] bg-slate-200 w-full absolute"></div>
+              <div class="dot w-4 h-4 rounded-full bg-slate-300 z-10 border-4 border-white"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide group cursor-pointer" onclick="updateTimeline(2)">
+          <div class="relative flex flex-col items-center">
+            <span class="year-text text-3xl font-bold text-slate-300">1989</span>
+            <div class="relative w-full flex items-center justify-center mt-6">
+              <div class="h-[2px] bg-slate-200 w-full absolute"></div>
+              <div class="dot w-4 h-4 rounded-full bg-slate-300 z-10 border-4 border-white"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide group cursor-pointer" onclick="updateTimeline(3)">
+          <div class="relative flex flex-col items-center">
+            <span class="year-text text-3xl font-bold text-slate-300">1992</span>
+            <div class="relative w-full flex items-center justify-center mt-6">
+              <div class="h-[2px] bg-slate-200 w-full absolute"></div>
+              <div class="dot w-4 h-4 rounded-full bg-slate-300 z-10 border-4 border-white"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide group cursor-pointer" onclick="updateTimeline(4)">
+          <div class="relative flex flex-col items-center">
+            <span class="year-text text-3xl font-bold text-slate-300">1995</span>
+            <div class="relative w-full flex items-center justify-center mt-6">
+              <div class="h-[2px] bg-slate-200 w-full absolute"></div>
+              <div class="dot w-4 h-4 rounded-full bg-slate-300 z-10 border-4 border-white"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide group cursor-pointer" onclick="updateTimeline(5)">
+          <div class="relative flex flex-col items-center">
+            <span class="year-text text-3xl font-bold text-slate-300">1999</span>
+            <div class="relative w-full flex items-center justify-center mt-6">
+              <div class="h-[2px] bg-slate-200 w-full absolute"></div>
+              <div class="dot w-4 h-4 rounded-full bg-slate-300 z-10 border-4 border-white"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide group cursor-pointer" onclick="updateTimeline(6)">
+          <div class="relative flex flex-col items-center">
+            <span class="year-text text-3xl font-bold text-slate-300">2002</span>
+            <div class="relative w-full flex items-center justify-center mt-6">
+              <div class="h-[2px] bg-slate-200 w-full absolute"></div>
+              <div class="dot w-4 h-4 rounded-full bg-slate-300 z-10 border-4 border-white"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide group cursor-pointer" onclick="updateTimeline(7)">
+          <div class="relative flex flex-col items-center">
+            <span class="year-text text-3xl font-bold text-slate-300">2003</span>
+            <div class="relative w-full flex items-center justify-center mt-6">
+              <div class="h-[2px] bg-slate-200 w-full absolute"></div>
+              <div class="dot w-4 h-4 rounded-full bg-slate-300 z-10 border-4 border-white"></div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="swiper-slide group cursor-pointer" onclick="updateTimeline(7)">
+          <div class="relative flex flex-col items-center">
+            <span class="year-text text-3xl font-bold text-slate-300">2004</span>
+            <div class="relative w-full flex items-center justify-center mt-6">
+              <div class="h-[2px] bg-slate-200 w-full absolute"></div>
+              <div class="dot w-4 h-4 rounded-full bg-slate-300 z-10 border-4 border-white"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  
+      <div class="swiper-button-next !text-slate-400 after:!text-xl border border-slate-300 rounded-lg w-10 h-10"></div>
+      <div class="swiper-button-prev !text-slate-400 after:!text-xl border border-slate-300 rounded-lg w-10 h-10"></div>
+    </div>
+  
+    <div id="timelineContent" class="mt-10 px-10 space-y-6">
+      <div class="animate-fadeIn">
+          <h3 class="text-2xl font-bold text-hota-green mb-4">1990/</h3>
+          <ul class="space-y-4 text-slate-600 list-disc pl-5">
+              <li>公司更名為「xx工業股份有限公司」。</li>
+          </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-300">
+    <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-3 gap-16 text-sm">
+  
+      <!-- Company Info -->
+      <div>
+        <div class="text-lg font-semibold mb-4 text-white">
+          COMPANY
+        </div>
+        <p class="leading-relaxed">
+          致力於提供穩定、可靠且具前瞻性的專業服務，
+          成為客戶長期信賴的合作夥伴。
+        </p>
+      </div>
+  
+      <!-- Contact -->
+      <div>
+        <h4 class="text-white font-semibold mb-4">
+          聯絡資訊
+        </h4>
+        <ul class="space-y-2">
+          <li>電話：02-1234-5678</li>
+          <li>Email：service@company.com</li>
+          <li>地址：台北市某某區某某路 100 號</li>
+        </ul>
+      </div>
+  
+      <!-- Links -->
+      <div>
+        <h4 class="text-white font-semibold mb-4">
+          快速連結
+        </h4>
+        <ul class="space-y-2">
+          <li><a href="about.html" class="hover:text-white">關於我們</a></li>
+          <li><a href="service.html" class="hover:text-white">產品服務</a></li>
+          <li><a href="contact.html" class="hover:text-white">聯絡我們</a></li>
+        </ul>
+      </div>
+  
+    </div>
+  
+    <div class="border-t border-slate-700 text-center text-xs py-6">
+      © 2026 COMPANY. All rights reserved.
+    </div>
+  </footer>  
+
+  <!-- 控制手機選單 -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+  
+    function toggleMenu() {
+      const isOpen = mobileMenu.classList.contains('translate-x-0');
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    }
+  
+    function openMenu() {
+      mobileMenu.classList.remove('translate-x-full');
+      mobileMenu.classList.add('translate-x-0');
+      menuOverlay.classList.remove('hidden');
+      setTimeout(() => menuOverlay.classList.add('opacity-100'), 10);
+      document.body.style.overflow = 'hidden'; // 鎖定背景不捲動
+    }
+  
+    function closeMenu() {
+      mobileMenu.classList.remove('translate-x-0');
+      mobileMenu.classList.add('translate-x-full');
+      menuOverlay.classList.remove('opacity-100');
+      setTimeout(() => {
+        menuOverlay.classList.add('hidden');
+        document.body.style.overflow = ''; // 恢復捲動
+      }, 300);
+    }
+  
+    // 監聽漢堡鈕
+    menuBtn.addEventListener('click', toggleMenu);
+    // 監聽遮罩 (點擊選單以外區域關閉)
+    menuOverlay.addEventListener('click', closeMenu);
+  
+    // 子選單展開功能
+    function toggleMobileSub(menuId, arrowId) {
+      const subMenu = document.getElementById(menuId);
+      const arrowIcon = document.getElementById(arrowId);
+      if (subMenu) {
+        subMenu.classList.toggle('hidden');
+        if (arrowIcon) {
+          arrowIcon.classList.toggle('rotate-180');
+        }
+      }
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!--  JS 效果 -->
+  <script>// 準備數據
+    const timelineData = [
+      { year: "1983", details: ["公司創立。"] },
+      { year: "1986", details: ["第一代碳化矽(DC)耐火材推出。"] },
+      { year: "1989", details: ["第二代碳化矽(DSS)耐火材推出。"] },
+      { year: "1992", details: ["菫青石(DR)耐火板推出。"] },
+      { year: "1995", details: ["第三代碳化矽(DD)耐火材推出。"] },
+      { year: "1999", details: [
+      "ISO 9002 國際品質保證系統認証通過。",
+      "第一代複合材料(DS)三明治耐火板推出。"
+      ] },
+      { year: "2002", details: ["第四代碳化矽(DK)耐火材推出。"] },
+      { year: "2003", details: ["ISO 9001：2000國際品質保證系統認證通過研發創新，顧客滿意"] },
+      { year: "2004", details: ["擴大營業規模及產能。"] }
+    ];
+    
+    // 初始化 Swiper
+    const timelineSwiper = new Swiper(".timelineSwiper", {
+      slidesPerView: 3,
+      spaceBetween: 0,
+      centeredSlides: true,
+      loop: true, // 開啟循環模式
+      observer: true, 
+      observeParents: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        768: { slidesPerView: 5 }
+      },
+      on: {
+        // 初始載入時顯示第一筆
+        init: function() {
+          // loop 模式下，索引值的處理稍有不同
+          updateContent(this.realIndex);
+        },
+
+        // 滑動時更新內容
+        slideChange: function () {
+          // 使用 realIndex 才能抓到循環中的正確資料索引
+          updateContent(this.realIndex);
+        }
+      }
+    });
+    
+    // 讓點擊年份也能切換 Swiper
+    document.querySelectorAll('.swiper-slide').forEach((slide) => {
+      slide.addEventListener('click', function() {
+      // 取得該 slide 在 swiper 中的索引並滑動
+      const index = parseInt(this.getAttribute('data-swiper-slide-index'));
+      timelineSwiper.slideToLoop(index);
+      });
+    });
+
+    function updateContent(index) {
+      const contentDiv = document.getElementById('timelineContent');
+      // 取得從 index 開始的連續三筆資料
+      // 因為有 loop，我們需要確保索引不會超出數組範圍
+      const displayItems = [];
+      for (let i = 0; i < 3; i++) {
+        const dataIndex = (index + i) % timelineData.length;
+        displayItems.push(timelineData[dataIndex]);
+      }
+      
+      const fullHtml = displayItems.map(data => {
+      const listHtml = data.details.map(item => `<li>${item}</li>`).join('');
+      return `
+      <div class="animate-fadeIn border-l-2 border-hota-green/20 pl-6 mb-10 last:mb-0">
+        <h3 class="text-2xl font-bold text-hota-green mb-4">${data.year}/</h3>
+        <ul class="space-y-4 text-slate-600 list-disc pl-5">
+          ${listHtml}
+        </ul>
+      </div>
+      `;
+    }).join('');
+
+    contentDiv.innerHTML = fullHtml;
+    }
+  </script>
+
+</body>
+</html>

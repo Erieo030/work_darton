@@ -1,10 +1,11 @@
-/* 自定義導覽箭頭樣式 */
+/* --- 首頁輪轉廣告 --- */
+/* 自定義導覽箭頭樣式(首頁輪轉廣告) */
 :root {
   --swiper-navigation-size: 24px; /* 箭頭圖示大小 */
   --swiper-theme-color: #ffffff;  /* 箭頭顏色 */
 }
 
-/* 箭頭容器通用樣式 */
+/* 箭頭容器通用樣式(首頁輪轉廣告) */
 .swiper-button-next, .swiper-button-prev {
   width: 50px;
   height: 50px;
@@ -19,7 +20,7 @@
   background: rgba(255, 255, 255, 0.3);
 }
 
-/* 文字進場動畫 */
+/* 文字進場動畫(首頁輪轉廣告) */
 .swiper-slide-active .hero-text {
   animation: fadeInUp 1.2s ease forwards;
 }
@@ -63,3 +64,99 @@
   .swiper-button-next { right: 10px; }
   .swiper-button-prev { left: 10px; }
 }
+
+/* --- 公司簡介(年限輪轉) --- */
+/* 定義綠 (依據截圖) */
+.text-hota-green { color: #006b35; }
+.bg-hota-green { background-color: #006b35; }
+
+/* 選中狀態的樣式 */
+.swiper-slide-active .year-text {
+  color: #006b35 !important;
+  transform: scale(1.1);
+}
+
+.swiper-slide-active .dot {
+  background-color: #006b35 !important;
+  box-shadow: 0 0 0 4px rgba(0, 107, 53, 0.2);
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 讓年份中間的橫線連起來 */
+.timelineSwiper .swiper-slide .relative .w-full .h-\[2px\] {
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+/* 處理「斷開」的視覺：當 Slide 索引為 0 (1983) 時，左側的線消失 */
+.swiper-slide[data-swiper-slide-index="0"] .h-\[2px\] {
+  width: 50% !important;
+  right: 0 !important;
+  left: auto !important;
+}
+
+/* 當 Slide 索引為最後一個 (2004) 時，右側的線消失 */
+/* 這裡假設您的 timelineData 長度是 10，所以索引是 9 */
+.swiper-slide[data-swiper-slide-index="9"] .h-\[2px\] {
+  width: 50% !important;
+  left: 0 !important;
+}
+
+/* 確保圓點在線條上方 */
+.dot {
+  position: relative;
+  z-index: 10;
+}
+
+/* 定義啟動狀態（當前年份）的顏色 */
+.swiper-slide-active .year-text {
+  color: #006b35 !important; /* 綠 */
+  transform: scale(1.2);
+}
+
+.swiper-slide-active .dot {
+  background-color: #006b35 !important;
+  border-color: #e2e8f0; /* 淺灰外圈 */
+  box-shadow: 0 0 0 4px rgba(0, 107, 51, 0.2);
+}
+
+.swiper-button-next, .swiper-button-prev {
+  border: 1px solid #d1d5db; /* 淺灰色邊框 */
+  border-radius: 8px;        /* 圓角 */
+  width: 40px;
+  height: 40px;
+  background: white;
+  transition: all 0.3s;
+
+  /* --- 新增以下三行 --- */
+  z-index: 50 !important;      /* 確保在所有層級之上 */
+  top: 50% !important;         /* 強制定位在中間 */
+  transform: translateY(-50%); /* 抵銷自身高度，達成精確置中 */
+  margin-top: 0 !important;    /* 移除 Swiper 預設可能干擾的 margin */
+}
+
+/* 修改箭頭大小與顏色 (Swiper 使用 icon font) */
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 16px !important; /* 縮小箭頭 */
+  color: #4b5563 !important;  /* 深灰色箭頭 */
+  font-weight: bold;
+}
+
+/* 滑鼠移入效果 */
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  background-color: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+/* 確保按鈕不會在手機版被切掉，調整位置 */
+.swiper-button-prev { left: 0px !important; }
+.swiper-button-next { right: 0px !important; }
