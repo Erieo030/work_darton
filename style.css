@@ -136,12 +136,11 @@
   height: 40px;
   background: white;
   transition: all 0.3s;
+  z-index: 100 !important;
+  margin-top: 0 !important;
 
-  /* --- 新增以下三行 --- */
-  z-index: 50 !important;      /* 確保在所有層級之上 */
-  top: 50% !important;         /* 強制定位在中間 */
-  transform: translateY(-50%); /* 抵銷自身高度，達成精確置中 */
-  margin-top: 0 !important;    /* 移除 Swiper 預設可能干擾的 margin */
+  top: 72% !important; 
+  transform: translateY(-160%);
 }
 
 /* 修改箭頭大小與顏色 (Swiper 使用 icon font) */
