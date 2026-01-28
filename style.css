@@ -1,0 +1,65 @@
+/* 自定義導覽箭頭樣式 */
+:root {
+  --swiper-navigation-size: 24px; /* 箭頭圖示大小 */
+  --swiper-theme-color: #ffffff;  /* 箭頭顏色 */
+}
+
+/* 箭頭容器通用樣式 */
+.swiper-button-next, .swiper-button-prev {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s;
+  z-index: 10; /* 確保在圖片上方 */
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* 文字進場動畫 */
+.swiper-slide-active .hero-text {
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- 手機版適應性調整 (Media Query) --- */
+@media (max-width: 768px) {
+  /* 1. 標題文字大小縮小 */
+  .hero-text h2 {
+    font-size: 2rem !important;
+    line-height: 1.2;
+  }
+
+  /* 2. 內文最多顯示三行 */
+  .hero-text p {
+    font-size: 1rem !important;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* 3. 手機版箭頭微調 (不再隱藏) */
+  .swiper-button-next, .swiper-button-prev {
+    display: flex !important; /* 強制顯示 */
+    width: 36px;  /* 手機版按鈕稍微縮小 */
+    height: 36px;
+    background: rgba(0, 0, 0, 0.2); /* 手機版背景稍深，增加對比度 */
+  }
+
+  /* 讓手機版箭頭圖示也變小一點 */
+  .swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 16px !important;
+  }
+
+  /* 調整左右間距，避免貼邊 */
+  .swiper-button-next { right: 10px; }
+  .swiper-button-prev { left: 10px; }
+}

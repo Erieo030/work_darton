@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>企業官網</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script src="tailwind-config.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Header(上半部) -->
+  <header class="bg-white border-b sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+  
+      <!-- Logo -->
+      <a href="index.html" class="nav-link text-slate-700 hover:text-blue-600 transition">
+        COMPANY
+      </a>
+      
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-10 text-sm font-medium h-full items-center">
+  
+        <div class="group h-full flex items-center">
+          <a href="about.html" class="nav-link text-slate-700 hover:text-blue-600 transition flex items-center">
+            關於我們
+            <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+          </a>
+      
+          <div class="absolute left-0 top-20 w-full bg-slate-600 text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 shadow-xl">
+            <div class="max-w-7xl mx-auto px-10 py-12 grid grid-cols-4 gap-8">
+              
+              <div class="border-l border-slate-500 pl-6">
+                <h4 class="font-bold mb-4 text-lg border-b border-slate-500 pb-2">xxx集團</h4>
+                <ul class="space-y-3 text-slate-300">
+                  <li><a href="#" class="hover:text-white transition">集團簡介</a></li>
+                  <li><a href="#" class="hover:text-white transition">企業願景</a></li>
+                  <li><a href="#" class="hover:text-white transition">核心競爭力</a></li>
+                  <li><a href="#" class="hover:text-white transition">關係企業</a></li>
+                </ul>
+              </div>
+      
+              <div class="border-l border-slate-500 pl-6">
+                <h4 class="font-bold mb-4 text-lg border-b border-slate-500 pb-2">新聞中心</h4>
+                <ul class="space-y-3 text-slate-300">
+                  <li><a href="#" class="hover:text-white transition">最新消息</a></li>
+                  <li><a href="#" class="hover:text-white transition">新聞集錦</a></li>
+                </ul>
+              </div>
+      
+              <div class="border-l border-slate-500 pl-6">
+                <h4 class="font-bold mb-4 text-lg border-b border-slate-500 pb-2">永續經營</h4>
+                <ul class="space-y-3 text-slate-300">
+                  <li><a href="#" class="hover:text-white transition">ESG政策與目標</a></li>
+                  <li><a href="#" class="hover:text-white transition">環境保護與社會責任</a></li>
+                  <li><a href="#" class="hover:text-white transition">國際品質認證</a></li>
+                </ul>
+              </div>
+      
+              <div class="border-l border-slate-500 pl-6">
+                <h4 class="font-bold mb-4 text-lg border-b border-slate-500 pb-2">全球據點</h4>
+                <ul class="space-y-3 text-slate-300">
+                  <li><a href="#" class="hover:text-white transition">全球佈局概況</a></li>
+                </ul>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      
+        <a href="service.html" class="nav-link text-slate-700 hover:text-blue-600 transition">產品服務</a>
+        <a href="contact.html" class="nav-link text-slate-700 hover:text-blue-600 transition">聯絡我們</a>
+      </nav>
+  
+      <!-- Mobile Menu Button -->
+      <button id="menuBtn" class="md:hidden focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-800" fill="none"
+          viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden fixed top-20 right-0 w-full bg-white shadow-2xl z-[60] transform translate-x-full transition-transform duration-300 ease-in-out h-[calc(100vh-80px)]">
+        <nav class="px-6 py-8 space-y-2 overflow-y-auto h-full">
+          
+          <div class="border-b border-gray-100">
+            <button onclick="toggleMobileSub('aboutContent', 'aboutArrow')" class="flex items-center justify-between w-full py-4 text-lg font-bold text-slate-800">
+                關於我們
+                <svg id="aboutArrow" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+      
+            <div id="aboutContent" class="hidden pb-6 space-y-6 pl-4 border-l-2 border-hota-green/30">
+              <div>
+                <p class="text-hota-green font-bold text-sm mb-2">xxx集團</p>
+                <ul class="space-y-3 text-slate-600">
+                  <li><a href="#" class="block py-1">集團簡介</a></li>
+                  <li><a href="#" class="block py-1">企業願景</a></li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-hota-green font-bold text-sm mb-2">新聞中心</p>
+                <ul class="space-y-3 text-slate-600">
+                  <li><a href="#" class="block py-1">最新消息</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <a href="service.html" class="block py-4 text-lg font-bold text-slate-800 border-b border-gray-100">
+            產品服務
+          </a>
+    
+          <a href="contact.html" class="block py-4 text-lg font-bold text-slate-800 border-b border-gray-100">
+            聯絡我們
+          </a>
+          
+        </nav>
+    </div>
+    
+    <div id="menuOverlay" class="fixed top-20 inset-0 bg-black/50 z-[55] hidden opacity-0 transition-opacity duration-300"></div>
+    
+    <div id="menuOverlay" class="fixed inset-0 bg-black/50 z-[55] hidden transition-opacity duration-300 opacity-0"></div>
+
+
+  </header>
+  
+
+  <!-- Hero(中間1) -->
+  <section class="bg-slate-100">
+    <div class="max-w-7xl mx-auto px-6 py-32">
+      <span class="text-sm tracking-widest text-blue-600 font-semibold">
+        ABOUT US
+      </span>
+      <h1 class="text-4xl font-bold mt-4 mb-8">
+        關於我們
+      </h1>
+      <p class="max-w-2xl text-slate-600 leading-relaxed">
+        我們致力於提供穩定、可靠且具前瞻性的專業服務，
+        長期深耕產業，協助客戶在快速變化的市場中持續成長。
+      </p>
+    </div>
+  </section>
+  
+  <section class="bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <h2 class="text-2xl font-bold mb-6">我們的使命</h2>
+        <p class="text-slate-600 leading-relaxed">
+          以專業技術與嚴謹態度，提供高品質解決方案，
+          成為客戶最值得信賴的長期合作夥伴。
+        </p>
+      </div>
+      <img
+        src="assets/images/IMG_2023.jpg"
+        class="w-full h-80 object-cover rounded-lg"
+        alt=""
+      />
+    </div>
+  </section>
+    
+  
+
+  <!-- Content Section(下半部) -->
+  <section class="bg-white">
+    <div class="max-w-7xl mx-auto px-6 py-32">
+  
+      <!-- Section Title -->
+      <div class="mb-16">
+        <span class="text-sm tracking-widest text-blue-600 font-semibold">
+          SERVICES
+        </span>
+        <h2 class="text-3xl font-bold mt-4">
+          核心服務項目
+        </h2>
+      </div>
+  
+      <!-- Cards -->
+      <div class="grid md:grid-cols-3 gap-10">
+  
+        <!-- Card -->
+        <div class="border rounded-lg p-8 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-blue-100 text-blue-600 flex items-center justify-center rounded mb-6 font-bold">
+            01
+          </div>
+          <h3 class="text-lg font-semibold mb-4">
+            專業規劃
+          </h3>
+          <p class="text-slate-600 leading-relaxed">
+            依據客戶需求提供完善的規劃建議，
+            確保每個專案皆具備可行性與穩定性。
+          </p>
+        </div>
+  
+        <!-- Card -->
+        <div class="border rounded-lg p-8 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-blue-100 text-blue-600 flex items-center justify-center rounded mb-6 font-bold">
+            02
+          </div>
+          <h3 class="text-lg font-semibold mb-4">
+            系統整合
+          </h3>
+          <p class="text-slate-600 leading-relaxed">
+            整合多元資源與技術，
+            建立高效率且可長期維運的系統架構。
+          </p>
+        </div>
+  
+        <!-- Card -->
+        <div class="border rounded-lg p-8 hover:shadow-lg transition">
+          <div class="w-12 h-12 bg-blue-100 text-blue-600 flex items-center justify-center rounded mb-6 font-bold">
+            03
+          </div>
+          <h3 class="text-lg font-semibold mb-4">
+            持續支援
+          </h3>
+          <p class="text-slate-600 leading-relaxed">
+            提供完善的售後支援與技術服務，
+            陪伴客戶長期成長與發展。
+          </p>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-slate-300">
+    <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-3 gap-16 text-sm">
+  
+      <!-- Company Info -->
+      <div>
+        <div class="text-lg font-semibold mb-4 text-white">
+          COMPANY
+        </div>
+        <p class="leading-relaxed">
+          致力於提供穩定、可靠且具前瞻性的專業服務，
+          成為客戶長期信賴的合作夥伴。
+        </p>
+      </div>
+  
+      <!-- Contact -->
+      <div>
+        <h4 class="text-white font-semibold mb-4">
+          聯絡資訊
+        </h4>
+        <ul class="space-y-2">
+          <li>電話：02-1234-5678</li>
+          <li>Email：service@company.com</li>
+          <li>地址：台北市某某區某某路 100 號</li>
+        </ul>
+      </div>
+  
+      <!-- Links -->
+      <div>
+        <h4 class="text-white font-semibold mb-4">
+          快速連結
+        </h4>
+        <ul class="space-y-2">
+          <li><a href="about.html" class="hover:text-white">關於我們</a></li>
+          <li><a href="service.html" class="hover:text-white">產品服務</a></li>
+          <li><a href="contact.html" class="hover:text-white">聯絡我們</a></li>
+        </ul>
+      </div>
+  
+    </div>
+  
+    <div class="border-t border-slate-700 text-center text-xs py-6">
+      © 2026 COMPANY. All rights reserved.
+    </div>
+  </footer>  
+
+  <!-- 控制手機選單 -->
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+  
+    function toggleMenu() {
+      const isOpen = mobileMenu.classList.contains('translate-x-0');
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    }
+  
+    function openMenu() {
+      mobileMenu.classList.remove('translate-x-full');
+      mobileMenu.classList.add('translate-x-0');
+      menuOverlay.classList.remove('hidden');
+      setTimeout(() => menuOverlay.classList.add('opacity-100'), 10);
+      document.body.style.overflow = 'hidden'; // 鎖定背景不捲動
+    }
+  
+    function closeMenu() {
+      mobileMenu.classList.remove('translate-x-0');
+      mobileMenu.classList.add('translate-x-full');
+      menuOverlay.classList.remove('opacity-100');
+      setTimeout(() => {
+        menuOverlay.classList.add('hidden');
+        document.body.style.overflow = ''; // 恢復捲動
+      }, 300);
+    }
+  
+    // 監聽漢堡鈕
+    menuBtn.addEventListener('click', toggleMenu);
+    // 監聽遮罩 (點擊選單以外區域關閉)
+    menuOverlay.addEventListener('click', closeMenu);
+  
+    // 子選單展開功能
+    function toggleMobileSub(menuId, arrowId) {
+      const subMenu = document.getElementById(menuId);
+      const arrowIcon = document.getElementById(arrowId);
+      if (subMenu) {
+        subMenu.classList.toggle('hidden');
+        if (arrowIcon) {
+          arrowIcon.classList.toggle('rotate-180');
+        }
+      }
+    }
+  </script>
+  
+</body>
+</html>
