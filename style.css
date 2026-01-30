@@ -1,22 +1,27 @@
-/* --- 首頁輪轉廣告 --- */
+/* --- 首頁輪轉廣告(index) --- */
 /* 自定義導覽箭頭樣式(首頁輪轉廣告) */
 :root {
-  --swiper-navigation-size: 24px; /* 箭頭圖示大小 */
-  --swiper-theme-color: #ffffff;  /* 箭頭顏色 */
+  --swiper-navigation-size: 24px;
+  /* 箭頭圖示大小 */
+  --swiper-theme-color: #ffffff;
+  /* 箭頭顏色 */
 }
 
 /* 箭頭容器通用樣式(首頁輪轉廣告) */
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
   width: 50px;
   height: 50px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   backdrop-filter: blur(4px);
   transition: all 0.3s;
-  z-index: 10; /* 確保在圖片上方 */
+  z-index: 10;
+  /* 確保在圖片上方 */
 }
 
-.swiper-button-next:hover, .swiper-button-prev:hover {
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
   background: rgba(255, 255, 255, 0.3);
 }
 
@@ -26,12 +31,20 @@
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(40px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* --- 手機版適應性調整 (Media Query) --- */
 @media (max-width: 768px) {
+
   /* 1. 標題文字大小縮小 */
   .hero-text h2 {
     font-size: 2rem !important;
@@ -48,27 +61,43 @@
   }
 
   /* 3. 手機版箭頭微調 (不再隱藏) */
-  .swiper-button-next, .swiper-button-prev {
-    display: flex !important; /* 強制顯示 */
-    width: 36px;  /* 手機版按鈕稍微縮小 */
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: flex !important;
+    /* 強制顯示 */
+    width: 36px;
+    /* 手機版按鈕稍微縮小 */
     height: 36px;
-    background: rgba(0, 0, 0, 0.2); /* 手機版背景稍深，增加對比度 */
+    background: rgba(0, 0, 0, 0.2);
+    /* 手機版背景稍深，增加對比度 */
   }
 
   /* 讓手機版箭頭圖示也變小一點 */
-  .swiper-button-next::after, .swiper-button-prev::after {
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
     font-size: 16px !important;
   }
 
   /* 調整左右間距，避免貼邊 */
-  .swiper-button-next { right: 10px; }
-  .swiper-button-prev { left: 10px; }
+  .swiper-button-next {
+    right: 10px;
+  }
+
+  .swiper-button-prev {
+    left: 10px;
+  }
 }
 
+/* ------------------------------------------------------------------------------------------ */
 /* --- 公司簡介(年限輪轉) --- */
 /* 定義綠 (依據截圖) */
-.text-hota-green { color: #006b35; }
-.bg-hota-green { background-color: #006b35; }
+.text-hota-green {
+  color: #006b35;
+}
+
+.bg-hota-green {
+  background-color: #006b35;
+}
 
 /* 選中狀態的樣式 */
 .swiper-slide-active .year-text {
@@ -86,8 +115,15 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* 讓年份中間的橫線連起來 */
@@ -119,19 +155,24 @@
 
 /* 定義啟動狀態（當前年份）的顏色 */
 .swiper-slide-active .year-text {
-  color: #006b35 !important; /* 綠 */
+  color: #006b35 !important;
+  /* 綠 */
   transform: scale(1.2);
 }
 
 .swiper-slide-active .dot {
   background-color: #006b35 !important;
-  border-color: #e2e8f0; /* 淺灰外圈 */
+  border-color: #e2e8f0;
+  /* 淺灰外圈 */
   box-shadow: 0 0 0 4px rgba(0, 107, 51, 0.2);
 }
 
-.swiper-button-next, .swiper-button-prev {
-  border: 1px solid #d1d5db; /* 淺灰色邊框 */
-  border-radius: 8px;        /* 圓角 */
+.swiper-button-next,
+.swiper-button-prev {
+  border: 1px solid #d1d5db;
+  /* 淺灰色邊框 */
+  border-radius: 8px;
+  /* 圓角 */
   width: 40px;
   height: 40px;
   background: white;
@@ -139,23 +180,79 @@
   z-index: 100 !important;
   margin-top: 0 !important;
 
-  top: 72% !important; 
+  top: 72% !important;
   transform: translateY(-160%);
 }
 
 /* 修改箭頭大小與顏色 (Swiper 使用 icon font) */
-.swiper-button-next::after, .swiper-button-prev::after {
-  font-size: 16px !important; /* 縮小箭頭 */
-  color: #4b5563 !important;  /* 深灰色箭頭 */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px !important;
+  /* 縮小箭頭 */
+  color: #4b5563 !important;
+  /* 深灰色箭頭 */
   font-weight: bold;
 }
 
 /* 滑鼠移入效果 */
-.swiper-button-next:hover, .swiper-button-prev:hover {
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
   background-color: #f3f4f6;
   border-color: #9ca3af;
 }
 
 /* 確保按鈕不會在手機版被切掉，調整位置 */
-.swiper-button-prev { left: 0px !important; }
-.swiper-button-next { right: 0px !important; }
+.swiper-button-prev {
+  left: 0px !important;
+}
+
+.swiper-button-next {
+  right: 0px !important;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+
+/* --- 分館 Hover 效果 --- */
+/* 自定義背景由上往下滑入效果 */
+/* 自定義背景動畫效果 */
+/* 自定義背景動畫效果 */
+.nav-hover-fill {
+  background: linear-gradient(to bottom, #2d6a4f 50%, transparent 50%);
+  background-size: 100% 200%;
+  background-position: bottom;
+  transition: background-position 0.4s ease;
+}
+
+.nav-hover-fill:hover {
+  background-position: top;
+}
+
+/* 讓文字在背景變色時也平滑過渡 */
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+.nav-hover-fill:hover>.nav-link {
+  color: white !important;
+}
+
+.nav-text::after {
+  content: "";
+  position: absolute;
+  /* 初始位置：隱藏在 nav-link 的上方邊界外 */
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: white;
+  opacity: 0;
+  transition: top 0.4s ease, opacity 0.4s ease;
+}
+
+/* 當 group 被 hover 時，觸發 span 標籤內的白線下滑 */
+.group:hover .nav-text::after {
+  /* 最終位置：剛好在文字底部 */
+  top: 150%;
+  /* 滑動到文字底部 */
+  opacity: 1;
+}

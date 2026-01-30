@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,12 +11,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
 
   <script src="https://cdn.tailwindcss.com"></script>
-  
+
   <script src="tailwind-config.js"></script>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <link rel="stylesheet" href="style.css">
+
+  <link rel="alternate" hreflang="zh-Hant" href="index.html" />
+  <link rel="alternate" hreflang="en" href="en/index.html" />
+  <link rel="alternate" hreflang="ja" href="ja/index.html" />
 </head>
 
 <body class="bg-white text-gray-800 font-sans">
@@ -23,26 +28,26 @@
   <!-- Header(上半部) -->
   <header class="bg-white border-b sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-  
+
       <!-- Logo -->
-      <a href="index.html" class="nav-link text-slate-700 hover:text-blue-600 transition">
+      <a href="index.html" class="nav-link text-slate-700 hover:text-blue-600 transition font-bold text-xl">
         COMPANY
       </a>
 
       <!-- Desktop Nav -->
       <nav class="hidden md:flex space-x-10 text-sm font-medium h-full items-center">
-  
-        <div class="group h-full flex items-center">
+
+        <div class="group h-full flex items-center px-3 nav-hover-fill">
           <a href="about.html" class="nav-link text-slate-700 hover:text-blue-600 transition flex items-center">
-            關於大肚工業
-            <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+            <span class="nav-text relative h-full flex items-center">關於大肚工業</span>
           </a>
-      
-          <div class="absolute left-0 top-20 w-full bg-slate-600 text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 shadow-xl">
+
+          <div
+            class="absolute left-0 right-0 top-20 w-full bg-slate-600 text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 shadow-xl">
             <div class="max-w-7xl mx-auto px-10 py-12 grid grid-cols-4 gap-8">
-              
+
               <div class="border-l border-slate-500 pl-6">
-                <h4 class="font-bold mb-4 text-lg border-b border-slate-500 pb-2">大肚工業</h4>
+                <h4 class="font-bold mb-4 text-lg border-b border-slate-500 pb-2">大度工業</h4>
                 <ul class="space-y-3 text-slate-300">
                   <li><a href="company.html" class="hover:text-white transition">公司簡介</a></li>
                   <li><a href="#" class="hover:text-white transition">企業願景 ?</a></li>
@@ -50,7 +55,7 @@
                   <li><a href="#" class="hover:text-white transition">關係企業 ?</a></li>
                 </ul>
               </div>
-      
+
               <div class="border-l border-slate-500 pl-6">
                 <h4 class="font-bold mb-4 text-lg border-b border-slate-500 pb-2">新聞中心</h4>
                 <ul class="space-y-3 text-slate-300">
@@ -58,7 +63,7 @@
                   <li><a href="#" class="hover:text-white transition">常見問題</a></li>
                 </ul>
               </div>
-      
+
               <div class="border-l border-slate-500 pl-6">
                 <h4 class="font-bold mb-4 text-lg border-b border-slate-500 pb-2">永續經營 ?</h4>
                 <ul class="space-y-3 text-slate-300">
@@ -67,121 +72,156 @@
                   <li><a href="#" class="hover:text-white transition">國際品質認證 ?</a></li>
                 </ul>
               </div>
-      
+
               <div class="border-l border-slate-500 pl-6">
                 <h4 class="font-bold mb-4 text-lg border-b border-slate-500 pb-2">全球據點 ?</h4>
                 <ul class="space-y-3 text-slate-300">
                   <li><a href="#" class="hover:text-white transition">全球佈局概況 ?</a></li>
                 </ul>
               </div>
-      
+
             </div>
           </div>
         </div>
-        
-        <div class="group h-full flex items-center">
-            <a href="about.html" class="nav-link text-slate-700 hover:text-blue-600 transition flex items-center">
-                產品服務
-              <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
-            </a>
-        
-            <div class="absolute left-0 top-20 w-full bg-slate-600 text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 shadow-xl">
-                <div class="max-w-7xl mx-auto px-10 py-12">
-                    
-                    <div class="border-l border-slate-500 pl-6 mb-6">
-                        <h4 class="font-bold text-lg border-b border-slate-500 pb-2 inline-block">製品系列組件</h4>
-                    </div>
-            
-                    <div class="grid grid-cols-4 gap-8 pl-6">
-                        <ul class="space-y-3 text-slate-300">
-                            <li><a href="#" class="hover:text-white transition">碳化矽薄板製品系列</a></li>
-                            <li><a href="#" class="hover:text-white transition">碳化矽製品系列</a></li>
-                        </ul>
-            
-                        <ul class="space-y-3 text-slate-300">
-                            <li><a href="#" class="hover:text-white transition">碳化矽異形製品系列</a></li>
-                            <li><a href="#" class="hover:text-white transition">三明治製品系列</a></li>
-                        </ul>
-            
-                        <ul class="space-y-3 text-slate-300">
-                            <li><a href="#" class="hover:text-white transition">堇青石製品系列</a></li>
-                        </ul>
-            
-                        <div></div>
-                    </div>
-                </div>
+
+        <div class="group h-full flex items-center px-3 nav-hover-fill">
+          <a href="about.html" class="nav-link text-slate-700 hover:text-blue-600 transition flex items-center">
+            <span class="nav-text relative h-full flex items-center">產品服務</span>
+          </a>
+
+          <div
+            class="absolute left-0 top-20 w-full bg-slate-600 text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 shadow-xl">
+            <div class="max-w-7xl mx-auto px-10 py-12">
+
+              <div class="border-l border-slate-500 pl-6 mb-6">
+                <h4 class="font-bold text-lg border-b border-slate-500 pb-2 inline-block">製品系列組件</h4>
+              </div>
+
+              <div class="grid grid-cols-4 gap-8 pl-6">
+                <ul class="space-y-3 text-slate-300">
+                  <li><a href="#" class="hover:text-white transition">碳化矽薄板製品系列</a></li>
+                  <li><a href="#" class="hover:text-white transition">碳化矽製品系列</a></li>
+                </ul>
+
+                <ul class="space-y-3 text-slate-300">
+                  <li><a href="#" class="hover:text-white transition">碳化矽異形製品系列</a></li>
+                  <li><a href="#" class="hover:text-white transition">三明治製品系列</a></li>
+                </ul>
+
+                <ul class="space-y-3 text-slate-300">
+                  <li><a href="#" class="hover:text-white transition">堇青石製品系列</a></li>
+                </ul>
+
+                <div></div>
+              </div>
             </div>
-        
-        
-        
+          </div>
         </div>
 
-        <a href="contact.html" class="nav-link text-slate-700 hover:text-blue-600 transition">聯絡我們</a>
+        <div class="group h-full flex items-center px-3 nav-hover-fill">
+          <a href="contact.html" class="nav-link text-slate-700 hover:text-blue-600 transition flex items-center">
+            <span class="nav-text relative h-full flex items-center">聯絡我們</span>
+          </a>
+        </div>
+
+        <div class="relative group ml-4 inline-block w-[80px]">
+          <button
+            class="flex items-center justify-center space-x-2 bg-gray-400 text-white w-full h-[36px] rounded-full text-sm font-medium">
+            <span id="currentLangText">繁中</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+
+          <div class="absolute left-0 mt-2 w-full bg-[#BDC3C7]/90 backdrop-blur-md rounded-[20px] shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+            <div class="flex flex-col items-center">
+              <a href="en/index.html"
+                class="flex items-center justify-center w-full h-[45px] text-sm text-white font-bold hover:bg-white/20 transition">ENG</a>
+              <a href="ja/index.html"
+                class="flex items-center justify-center w-full h-[45px] text-sm text-white font-bold hover:bg-white/20 transition border-t border-white/10">JP</a>
+            </div>
+          </div>
+        </div>
+
       </nav>
-  
+
       <!-- Mobile Menu Button -->
       <button id="menuBtn" class="md:hidden focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-800" fill="none"
-          viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16" />
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-800" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
       </button>
     </div>
-  
+
     <!-- Mobile Menu -->
-    <div id="mobileMenu" class="md:hidden fixed top-20 right-0 w-full bg-white shadow-2xl z-[60] transform translate-x-full transition-transform duration-300 ease-in-out h-[calc(100vh-80px)]">
-        <nav class="px-6 py-8 space-y-2 overflow-y-auto h-full">
-          
-          <div class="border-b border-gray-100">
-            <button onclick="toggleMobileSub('aboutContent', 'aboutArrow')" class="flex items-center justify-between w-full py-4 text-lg font-bold text-slate-800">
-                關於我們
-                <svg id="aboutArrow" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-            </button>
-      
-            <div id="aboutContent" class="hidden pb-6 space-y-6 pl-4 border-l-2 border-hota-green/30">
-              <div>
-                <p class="text-hota-green font-bold text-sm mb-2">xxx集團</p>
-                <ul class="space-y-3 text-slate-600">
-                  <li><a href="#" class="block py-1">集團簡介</a></li>
-                  <li><a href="#" class="block py-1">企業願景</a></li>
-                </ul>
-              </div>
-              <div>
-                <p class="text-hota-green font-bold text-sm mb-2">新聞中心</p>
-                <ul class="space-y-3 text-slate-600">
-                  <li><a href="#" class="block py-1">最新消息</a></li>
-                </ul>
-              </div>
+    <div id="mobileMenu"
+      class="md:hidden fixed top-20 right-0 w-full bg-white shadow-2xl z-[60] transform translate-x-full transition-transform duration-300 ease-in-out h-[calc(100vh-80px)]">
+      <div class="px-6 py-4 bg-slate-50 border-b border-gray-100 flex items-center justify-between">
+        <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">選擇語言</span>
+        <div class="py-6 flex space-x-4">
+          <a href="index.html" class="text-slate-800 font-bold underline">繁中</a>
+          <span class="text-slate-300">|</span>
+          <a href="/en/index.html" class="text-slate-400 font-bold">ENG</a>
+          <span class="text-slate-300">|</span>
+          <a href="/ja/index.html" class="text-slate-400 font-bold">JP</a>
+        </div>
+      </div>
+
+      <nav class="px-6 py-8 space-y-2 overflow-y-auto h-full">
+        <div class="border-b border-gray-100">
+          <button onclick="toggleMobileSub('aboutContent', 'aboutArrow')"
+            class="flex items-center justify-between w-full py-4 text-lg font-bold text-slate-800">
+            關於我們
+            <svg id="aboutArrow" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div id="aboutContent" class="hidden pb-6 space-y-6 pl-4 border-l-2 border-hota-green/30">
+            <div>
+              <p class="text-hota-green font-bold text-sm mb-2">xxx集團</p>
+              <ul class="space-y-3 text-slate-600">
+                <li><a href="#" class="block py-1">集團簡介</a></li>
+                <li><a href="#" class="block py-1">企業願景</a></li>
+              </ul>
+            </div>
+            <div>
+              <p class="text-hota-green font-bold text-sm mb-2">新聞中心</p>
+              <ul class="space-y-3 text-slate-600">
+                <li><a href="#" class="block py-1">最新消息</a></li>
+              </ul>
             </div>
           </div>
-    
-          <a href="service.html" class="block py-4 text-lg font-bold text-slate-800 border-b border-gray-100">
-            產品服務
-          </a>
-    
-          <a href="contact.html" class="block py-4 text-lg font-bold text-slate-800 border-b border-gray-100">
-            聯絡我們
-          </a>
-          
-        </nav>
+        </div>
+
+        <a href="service.html" class="block py-4 text-lg font-bold text-slate-800 border-b border-gray-100">
+          產品服務
+        </a>
+
+        <a href="contact.html" class="block py-4 text-lg font-bold text-slate-800 border-b border-gray-100">
+          聯絡我們
+        </a>
+      </nav>
     </div>
-    
-    <div id="menuOverlay" class="fixed top-20 inset-0 bg-black/50 z-[55] hidden opacity-0 transition-opacity duration-300"></div>
-    
+
+    <div id="menuOverlay"
+      class="fixed top-20 inset-0 bg-black/50 z-[55] hidden opacity-0 transition-opacity duration-300">
+    </div>
+
     <!-- 可能不重要<div id="menuOverlay" class="fixed inset-0 bg-black/50 z-[55] hidden transition-opacity duration-300 opacity-0"></div> -->
 
   </header>
-  
+
   <!-- 滑動區塊 -->
   <section class="relative h-[600px] md:h-[800px] overflow-hidden">
     <div class="swiper mySwiper h-full">
       <div class="swiper-wrapper">
-        
+
         <div class="swiper-slide relative">
-          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070" class="w-full h-full object-cover" />
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070"
+            class="w-full h-full object-cover" />
           <div class="absolute inset-0 bg-black/30 flex items-center">
             <div class="max-w-7xl mx-auto px-6 w-full text-white">
               <div class="hero-text opacity-0">
@@ -192,9 +232,10 @@
             </div>
           </div>
         </div>
-  
+
         <div class="swiper-slide relative">
-          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2070" class="w-full h-full object-cover" />
+          <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2070"
+            class="w-full h-full object-cover" />
           <div class="absolute inset-0 bg-black/30 flex items-center">
             <div class="max-w-7xl mx-auto px-6 w-full text-white">
               <div class="hero-text opacity-0">
@@ -205,12 +246,12 @@
             </div>
           </div>
         </div>
-  
+
       </div>
-  
+
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
-  
+
       <div class="swiper-pagination"></div>
     </div>
   </section>
@@ -230,11 +271,11 @@
       </p>
     </div>
   </section>
-    
+
   <!-- 公司介紹 Section(中間2) -->
   <section class="bg-white">
     <div class="max-w-7xl mx-auto px-6 py-32 grid md:grid-cols-2 gap-16 items-center">
-  
+
       <!-- Text -->
       <div>
         <span class="text-sm tracking-widest text-blue-600 font-semibold">
@@ -252,21 +293,17 @@
           建立長期且值得信賴的合作關係。
         </p>
       </div>
-  
+
       <!-- Image -->
-      <img
-        src="assets/images/IMG_6704.png"
-        alt="公司介紹"
-        class="w-full h-80 object-cover rounded-lg"
-      />
-  
+      <img src="assets/images/IMG_6704.png" alt="公司介紹" class="w-full h-80 object-cover rounded-lg" />
+
     </div>
   </section>
 
-    <!-- 公司介紹 Section(中間3) -->
+  <!-- 公司介紹 Section(中間3) -->
   <section class="bg-slate-100">
     <div class="max-w-7xl mx-auto px-6 py-32 grid md:grid-cols-2 gap-16 items-center">
-  
+
       <!-- Text -->
       <div>
         <span class="text-sm tracking-widest text-blue-600 font-semibold">
@@ -284,22 +321,18 @@
           為客戶創造長期且可衡量的價值。
         </p>
       </div>
-  
+
       <!-- Image -->
-      <img
-        src="assets/images/IMG_2023.jpg"
-        alt="公司優勢"
-        class="w-full h-80 object-cover rounded-lg"
-      />
+      <img src="assets/images/IMG_2023.jpg" alt="公司優勢" class="w-full h-80 object-cover rounded-lg" />
 
     </div>
-  </section>  
-  
+  </section>
+
 
   <!-- Content Section(下半部) -->
   <section class="bg-white">
     <div class="max-w-7xl mx-auto px-6 py-32">
-  
+
       <!-- Section Title -->
       <div class="mb-16">
         <span class="text-sm tracking-widest text-blue-600 font-semibold">
@@ -309,10 +342,10 @@
           核心服務項目
         </h2>
       </div>
-  
+
       <!-- Cards -->
       <div class="grid md:grid-cols-3 gap-10">
-  
+
         <!-- Card -->
         <div class="border rounded-lg p-8 hover:shadow-lg transition">
           <div class="w-12 h-12 bg-blue-100 text-blue-600 flex items-center justify-center rounded mb-6 font-bold">
@@ -326,7 +359,7 @@
             確保每個專案皆具備可行性與穩定性。
           </p>
         </div>
-  
+
         <!-- Card -->
         <div class="border rounded-lg p-8 hover:shadow-lg transition">
           <div class="w-12 h-12 bg-blue-100 text-blue-600 flex items-center justify-center rounded mb-6 font-bold">
@@ -340,7 +373,7 @@
             建立高效率且可長期維運的系統架構。
           </p>
         </div>
-  
+
         <!-- Card -->
         <div class="border rounded-lg p-8 hover:shadow-lg transition">
           <div class="w-12 h-12 bg-blue-100 text-blue-600 flex items-center justify-center rounded mb-6 font-bold">
@@ -354,17 +387,17 @@
             陪伴客戶長期成長與發展。
           </p>
         </div>
-  
+
       </div>
     </div>
   </section>
-  
-  
+
+
 
   <!-- Footer -->
   <footer class="bg-slate-900 text-slate-300">
     <div class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-3 gap-16 text-sm">
-  
+
       <!-- Company Info -->
       <div>
         <div class="text-lg font-semibold mb-4 text-white">
@@ -375,7 +408,7 @@
           成為客戶長期信賴的合作夥伴。
         </p>
       </div>
-  
+
       <!-- Contact -->
       <div>
         <h4 class="text-white font-semibold mb-4">
@@ -387,7 +420,7 @@
           <li>地址：台北市某某區某某路 100 號</li>
         </ul>
       </div>
-  
+
       <!-- Links -->
       <div>
         <h4 class="text-white font-semibold mb-4">
@@ -399,20 +432,20 @@
           <li><a href="contact.html" class="hover:text-white">聯絡我們</a></li>
         </ul>
       </div>
-  
+
     </div>
-  
+
     <div class="border-t border-slate-700 text-center text-xs py-6">
       © 2026 COMPANY. All rights reserved.
     </div>
-  </footer>  
+  </footer>
 
   <!-- 控制手機選單 -->
   <script>
     const menuBtn = document.getElementById('menuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
     const menuOverlay = document.getElementById('menuOverlay');
-  
+
     function toggleMenu() {
       const isOpen = mobileMenu.classList.contains('translate-x-0');
       if (isOpen) {
@@ -421,7 +454,7 @@
         openMenu();
       }
     }
-  
+
     function openMenu() {
       mobileMenu.classList.remove('translate-x-full');
       mobileMenu.classList.add('translate-x-0');
@@ -429,7 +462,7 @@
       setTimeout(() => menuOverlay.classList.add('opacity-100'), 10);
       document.body.style.overflow = 'hidden'; // 鎖定背景不捲動
     }
-  
+
     function closeMenu() {
       mobileMenu.classList.remove('translate-x-0');
       mobileMenu.classList.add('translate-x-full');
@@ -439,12 +472,12 @@
         document.body.style.overflow = ''; // 恢復捲動
       }, 300);
     }
-  
+
     // 監聽漢堡鈕
     menuBtn.addEventListener('click', toggleMenu);
     // 監聽遮罩 (點擊選單以外區域關閉)
     menuOverlay.addEventListener('click', closeMenu);
-  
+
     // 子選單展開功能
     function toggleMobileSub(menuId, arrowId) {
       const subMenu = document.getElementById(menuId);
@@ -457,7 +490,7 @@
       }
     }
   </script>
-  
+
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- 首輪廣告 JS 效果 -->
@@ -486,4 +519,5 @@
   </script>
 
 </body>
+
 </html>
