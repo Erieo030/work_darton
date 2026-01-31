@@ -303,7 +303,7 @@
 
   <!-- 公司介紹 Section(中間3) -->
   <section class="bg-slate-100">
-    <div class="max-w-7xl mx-auto px-6 py-32 grid md:grid-cols-2 gap-16 items-center">
+    <div class="max-w-7xl mx-auto px-6 py-32 grid md:grid-cols-2 gap-16 items-center nav-hover-2-fill group">
 
       <!-- Text -->
       <div>
@@ -324,7 +324,10 @@
       </div>
 
       <!-- Image -->
-      <img src="assets/images/IMG_2023.jpg" alt="公司優勢" class="w-full h-80 object-cover rounded-lg" />
+      <div class="overflow-hidden rounded-lg">
+        <img src="assets/images/IMG_2023.jpg" alt="公司優勢"
+          class="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-105" />
+      </div>
 
     </div>
   </section>
@@ -393,7 +396,108 @@
     </div>
   </section>
 
+  <!-- Content Section(生產資訊+地圖) -->
+  <section class="bg-gray-100 py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
 
+        <div class="px-4">
+          <p class="text-sm text-gray-500 font-bold mb-2">臺灣TOP</p>
+          <div class="text-5xl font-extrabold text-slate-800">1</div>
+          <p class="text-xs mt-2 text-gray-400">齒輪切削工具</p>
+        </div>
+
+        <div class="px-4 border-l border-gray-300">
+          <p class="text-sm text-gray-500 font-bold mb-2">卓越經驗累積</p>
+          <div class="flex items-baseline justify-center text-slate-800">
+            <span class="text-5xl font-extrabold">55</span>
+            <span class="text-xl ml-1 font-bold">年+</span>
+          </div>
+          <p class="text-xs mt-2 text-gray-400">以上</p>
+        </div>
+
+        <div class="px-4 border-l border-gray-300">
+          <p class="text-sm text-gray-500 font-bold mb-2">客戶滿意度</p>
+          <div class="flex items-baseline justify-center text-slate-800">
+            <span class="text-5xl font-extrabold">98</span>
+            <span class="text-xl ml-1 font-bold">%</span>
+          </div>
+          <p class="text-xs mt-2 text-gray-400">以上</p>
+        </div>
+
+        <div class="px-4 border-l border-gray-300">
+          <p class="text-sm text-gray-500 font-bold mb-2">每年生產部件</p>
+          <div class="flex items-baseline justify-center text-slate-800">
+            <span class="text-5xl font-extrabold">2,000</span>
+            <span class="text-xl ml-1 font-bold">萬</span>
+          </div>
+          <p class="text-xs mt-2 text-gray-400">以上件數</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-800 flex flex-wrap items-center justify-center gap-4">
+          臺灣第一
+          <span class="bg-[#1A8D4D] text-white px-4 py-1 rounded-full text-base font-medium shadow-sm">Darton</span>
+          全球領先
+        </h2>
+      </div>
+
+      <div class="relative w-full max-w-5xl mx-auto">
+
+        <div class="relative z-10 w-full overflow-hidden">
+          <img src="assets/images/map-01.png" alt="Global Map"
+            class="w-full opacity-60 grayscale contrast-125 brightness-95 block">
+
+          <img src="assets/images/map-02.png" alt="pin Map"
+            class="absolute inset-0 w-full origin-center pointer-events-none">
+        </div>
+
+
+
+        <div class="mt-20 text-center">
+          <a href="#"
+            class="group inline-flex items-center px-12 py-3.5 bg-slate-800 text-white rounded-full text-sm font-bold hover:bg-slate-700 transition-all shadow-lg">
+            全球市場概況
+            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+  </section>
+
+  <!-- Footer上方的聯絡 -->
+  <section class="bg-[#1A8D4D] py-12 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="text-white">
+        <h2 class="text-2xl md:text-3xl font-bold tracking-widest">
+          因轉動而前進 · 因前進而精進
+        </h2>
+        <p class="text-white/70 mt-2">ROTATION CREATES ADVANCEMENT, ADVANCEMENT MAKES PERFECTION</p>
+      </div>
+
+      <a href="mailto:service@company.com"
+        class="group bg-white text-[#1A8D4D] px-8 py-4 rounded-full font-bold flex items-center gap-3 hover:bg-opacity-90 transition-all shadow-xl">
+        <span>聯絡我們 Email</span>
+        <div class="bg-[#1A8D4D] p-2 rounded-full text-white group-hover:translate-x-1 transition-transform">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+            </path>
+          </svg>
+        </div>
+      </a>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="bg-slate-900 text-slate-300">

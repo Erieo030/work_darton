@@ -256,3 +256,32 @@
   /* 滑動到文字底部 */
   opacity: 1;
 }
+
+/* ------------------------------------------------------------------------------------------ */
+/* --- 內容 Hover 效果 --- */
+/* 自定義背景由下往上滑入效果 */
+
+.nav-hover-2-fill {
+  /* 1. 設定漸層：下半部 50% 是灰白色，上半部 50% 是透明 */
+  background: linear-gradient(to top, #cfd7e1 50%, transparent 50%);
+
+  /* 2. 設定大小：寬度 40%，高度 200%（確保有色區塊剛好填滿容器） */
+  background-size: 50% 200%;
+
+  /* 3. 初始狀態：設定在 top，這會讓下半部的有色區塊「升上來」填滿高度 */
+  background-position: top left;
+  background-repeat: no-repeat;
+
+  /* 4. 平滑過渡 */
+  transition: background-position 0.4s ease;
+}
+
+.nav-hover-2-fill:hover {
+  /* 5. Hover 狀態：將背景推向 bottom，有色區塊會往下掉，露出上半部的透明區塊 */
+  background-position: bottom left;
+}
+
+/* ------------------------------------------------------------------------------------------ */
+/* --- 地圖效果 --- */
+
+
