@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>企業サイト | 卓越した技術</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../tailwind-config.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../style.css">
+
+    <link rel="alternate" hreflang="zh-Hant" href="../company.html" />
+    <link rel="alternate" hreflang="en" href="../en/company.html" />
+    <link rel="alternate" hreflang="ja" href="company.html" />
+</head>
+
+<body class="bg-white text-gray-800 font-sans">
+    <!-- Header(上半部) -->
+    <header class="bg-white border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
+            <!-- Logo -->
+            <a href="index.html" class="nav-link text-slate-700 hover:text-blue-600 transition font-bold text-xl">
+                COMPANY
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex space-x-10 text-sm font-medium h-full items-center">
+
+                <div class="group h-full flex items-center">
+                    <a href="#" class="nav-link text-slate-700 hover:text-blue-600 transition flex items-center">
+                        会社概要
+                        <svg class="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+
+                    <div
+                        class="absolute left-0 top-20 w-full bg-slate-600 text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 shadow-xl">
+                        <div class="max-w-7xl mx-auto px-10 py-12 grid grid-cols-4 gap-8">
+                            <div class="border-l border-slate-500 pl-6">
+                                <h4 class="font-bold mb-4 text-lg border-b border-slate-500 pb-2">大度工業</h4>
+                                <ul class="space-y-3 text-slate-300">
+                                    <li><a href="#" class="hover:text-white transition">会社紹介</a></li>
+                                    <li><a href="#" class="hover:text-white transition">企業理念</a></li>
+                                    <li><a href="#" class="hover:text-white transition">コアコンピタンス</a></li>
+                                </ul>
+                            </div>
+                            <div class="border-l border-slate-500 pl-6">
+                                <h4 class="font-bold mb-4 text-lg border-b border-slate-500 pb-2">ニュース</h4>
+                                <ul class="space-y-3 text-slate-300">
+                                    <li><a href="#" class="hover:text-white transition">最新情報</a></li>
+                                    <li><a href="#" class="hover:text-white transition">よくある質問</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="nav-link text-slate-700 hover:text-blue-600 transition">製品・サービス</a>
+                <a href="#" class="nav-link text-slate-700 hover:text-blue-600 transition">お問い合わせ</a>
+
+                <div class="relative group ml-4 inline-block w-[80px]">
+                    <button
+                        class="flex items-center justify-center space-x-2 bg-gray-400 text-white w-full h-[36px] rounded-full text-sm font-medium">
+                        <span id="currentLangText">JP</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+
+                    <div
+                        class="absolute left-0 mt-2 w-full bg-[#BDC3C7]/90 backdrop-blur-md rounded-[20px] shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 overflow-hidden">
+                        <div class="flex flex-col items-center">
+                            <a href="../company.html"
+                                class="flex items-center justify-center w-full h-[45px] text-sm text-white font-bold hover:bg-white/20 transition">繁中</a>
+                            <a href="../en/company.html"
+                                class="flex items-center justify-center w-full h-[45px] text-sm text-white font-bold hover:bg-white/20 transition border-t border-white/10">ENG</a>
+                        </div>
+                    </div>
+                </div>
+
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menuBtn" class="md:hidden focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-slate-800" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="md:hidden fixed top-20 right-0 w-full bg-white shadow-2xl z-[60] transform translate-x-full transition-transform duration-300 ease-in-out h-[calc(100vh-80px)]">
+            <div class="px-6 py-4 bg-slate-50 border-b border-gray-100 flex items-center justify-between">
+                <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">選擇語言</span>
+                <div class="py-6 flex space-x-4">
+                    <a href="../company.html" class="text-slate-400 font-bold">繁中</a>
+                    <span class="text-slate-300">|</span>
+                    <a href="../en/company.html" class="text-slate-400 font-bold">ENG</a>
+                    <span class="text-slate-300">|</span>
+                    <a href="company.html" class="text-slate-800 font-bold underline">JP</a>
+                </div>
+            </div>
+
+            <nav class="px-6 py-8 space-y-2 overflow-y-auto h-full">
+                <div class="border-b border-gray-100">
+                    <button onclick="toggleMobileSub('aboutContent', 'aboutArrow')"
+                        class="flex items-center justify-between w-full py-4 text-lg font-bold text-slate-800">
+                        關於我們
+                        <svg id="aboutArrow" class="w-5 h-5 transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+
+                    <div id="aboutContent" class="hidden pb-6 space-y-6 pl-4 border-l-2 border-hota-green/30">
+                        <div>
+                            <p class="text-hota-green font-bold text-sm mb-2">xxx集團</p>
+                            <ul class="space-y-3 text-slate-600">
+                                <li><a href="company.html" class="block py-1">公司簡介</a></li>
+                                <li><a href="#" class="block py-1">企業願景</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="text-hota-green font-bold text-sm mb-2">新聞中心</p>
+                            <ul class="space-y-3 text-slate-600">
+                                <li><a href="#" class="block py-1">最新消息</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="service.html" class="block py-4 text-lg font-bold text-slate-800 border-b border-gray-100">
+                    產品服務
+                </a>
+
+                <a href="contact.html" class="block py-4 text-lg font-bold text-slate-800 border-b border-gray-100">
+                    聯絡我們
+                </a>
+            </nav>
+        </div>
+
+        <div id="menuOverlay"
+            class="fixed top-20 inset-0 bg-black/50 z-[55] hidden opacity-0 transition-opacity duration-300">
+        </div>
+
+        <!-- 可能不重要<div id="menuOverlay" class="fixed inset-0 bg-black/50 z-[55] hidden transition-opacity duration-300 opacity-0"></div> -->
+
+    </header>
+
+    <!-- 第一部分 -->
+    <main>
+        <section class="relative h-[40vh] bg-slate-800 flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 opacity-40">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80"
+                    alt="About" class="w-full h-full object-cover">
+            </div>
+            <div class="relative z-10 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-white tracking-widest">私たちについて</h1>
+                <p class="text-slate-300 mt-4 tracking-wider">ABOUT US</p>
+            </div>
+        </section>
+
+        <!-- 介紹 -->
+        <section class="max-w-7xl mx-auto px-6 py-20">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 space-y-6">
+                    <h2 class="text-3xl font-bold text-slate-800 border-l-4 border-blue-600 pl-4">会社概要</h2>
+                    <p class="text-slate-600 leading-loose">
+                        Darton Industrial Co., Ltd.は1983年に台湾桃園市に設立されました。
+                        は、創造的なデザイナーであり、高品質の耐火材料の製造者でもあります。 2004 年に、私たちは
+                        ISO 9001:2000認証を取得。
+                    </p>
+                    <p class="text-slate-600 leading-loose">
+                        特殊耐火物の製造において30年以上の経験を蓄積。に基づく
+                        ダートンはこれまでの経験を蓄積し、生産技術を向上させ続けています。
+                        製品の研究開発と設計、ニーズに応える最高の機能性耐火物を市場に提供します。
+                        常に更新されるお客様のニーズを捉え、お客様に最大限の利益をもたらします。
+                        品質上の利点と顧客志向の戦略の適用。現在はダートン工業
+                        Co., Ltd.は特殊耐火物の世界で最も重要なサプライヤーの1つになりました
+                        材料。
+                    </p>
+                    <p class="text-slate-600 leading-loose">
+                        私たちは、高品質、高信頼性、高価値の製品を作り続け、
+                        顧客の製品品質の向上、生産能力の向上、エネルギーの節約、エネルギー削減を支援します。
+                        当社製品を使用する際にかかる費用。
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80"
+                        class="rounded-lg shadow-2xl w-full" alt="Factory">
+                </div>
+            </div>
+        </section>
+
+        <!-- 第二部分 -->
+        <section class="bg-slate-50 py-20">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-slate-800">私たちの理念</h2>
+                    <div class="w-20 h-1 bg-blue-600 mx-auto mt-4"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                        <div
+                            class="w-12 h-12 bg-blue-100 text-blue-600 flex items-center justify-center rounded-full mb-6 text-xl">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">優れた品質</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">徹底した品質管理体制により不良品ゼロを目指します。</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                        <div
+                            class="w-12 h-12 bg-blue-100 text-blue-600 flex items-center justify-center rounded-full mb-6 text-xl">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">継続的なイノベーション</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">高度なプロセスと自動化を通じて業界のリーダーシップを維持します。</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition">
+                        <div
+                            class="w-12 h-12 bg-blue-100 text-blue-600 flex items-center justify-center rounded-full mb-6 text-xl">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">持続可能性</h3>
+                        <p class="text-slate-500 text-sm leading-relaxed">社会的責任を果たし、グローバルパートナーと価値を共創します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 時間戳 -->
+    <section class="max-w-7xl mx-auto px-6 py-20">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-slate-800">私たちの沿革</h2>
+            <div class="w-16 h-1 bg-hota-green mx-auto mt-4"></div>
+        </div>
+
+        <div class="swiper timelineSwiper relative">
+            <div class="swiper-wrapper mb-20">
+
+                <div class="swiper-slide group cursor-pointer" onclick="updateTimeline(0)">
+                    <div class="relative flex flex-col items-center">
+                        <span
+                            class="year-text text-3xl font-bold text-slate-300 group-hover:text-hota-green transition-colors duration-300">1983</span>
+                        <div class="relative w-full flex items-center justify-center mt-6">
+                            <div class="h-[2px] bg-slate-200 w-full absolute"></div>
+                            <div
+                                class="dot w-4 h-4 rounded-full bg-slate-300 z-10 border-4 border-white transition-all duration-300">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide group cursor-pointer" onclick="updateTimeline(1)">
+                    <div class="relative flex flex-col items-center">
+                        <span class="year-text text-3xl font-bold text-slate-300">1986</span>
+                        <div class="relative w-full flex items-center justify-center mt-6">
+                            <div class="h-[2px] bg-slate-200 w-full absolute"></div>
+                            <div class="dot w-4 h-4 rounded-full bg-slate-300 z-10 border-4 border-white"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide group cursor-pointer" onclick="updateTimeline(2)">
+                    <div class="relative flex flex-col items-center">
+                        <span class="year-text text-3xl font-bold text-slate-300">1989</span>
+                        <div class="relative w-full flex items-center justify-center mt-6">
+                            <div class="h-[2px] bg-slate-200 w-full absolute"></div>
+                            <div class="dot w-4 h-4 rounded-full bg-slate-300 z-10 border-4 border-white"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide group cursor-pointer" onclick="updateTimeline(3)">
+                    <div class="relative flex flex-col items-center">
+                        <span class="year-text text-3xl font-bold text-slate-300">1992</span>
+                        <div class="relative w-full flex items-center justify-center mt-6">
+                            <div class="h-[2px] bg-slate-200 w-full absolute"></div>
+                            <div class="dot w-4 h-4 rounded-full bg-slate-300 z-10 border-4 border-white"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide group cursor-pointer" onclick="updateTimeline(4)">
+                    <div class="relative flex flex-col items-center">
+                        <span class="year-text text-3xl font-bold text-slate-300">1995</span>
+                        <div class="relative w-full flex items-center justify-center mt-6">
+                            <div class="h-[2px] bg-slate-200 w-full absolute"></div>
+                            <div class="dot w-4 h-4 rounded-full bg-slate-300 z-10 border-4 border-white"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide group cursor-pointer" onclick="updateTimeline(5)">
+                    <div class="relative flex flex-col items-center">
+                        <span class="year-text text-3xl font-bold text-slate-300">1999</span>
+                        <div class="relative w-full flex items-center justify-center mt-6">
+                            <div class="h-[2px] bg-slate-200 w-full absolute"></div>
+                            <div class="dot w-4 h-4 rounded-full bg-slate-300 z-10 border-4 border-white"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide group cursor-pointer" onclick="updateTimeline(6)">
+                    <div class="relative flex flex-col items-center">
+                        <span class="year-text text-3xl font-bold text-slate-300">2002</span>
+                        <div class="relative w-full flex items-center justify-center mt-6">
+                            <div class="h-[2px] bg-slate-200 w-full absolute"></div>
+                            <div class="dot w-4 h-4 rounded-full bg-slate-300 z-10 border-4 border-white"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide group cursor-pointer" onclick="updateTimeline(7)">
+                    <div class="relative flex flex-col items-center">
+                        <span class="year-text text-3xl font-bold text-slate-300">2003</span>
+                        <div class="relative w-full flex items-center justify-center mt-6">
+                            <div class="h-[2px] bg-slate-200 w-full absolute"></div>
+                            <div class="dot w-4 h-4 rounded-full bg-slate-300 z-10 border-4 border-white"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide group cursor-pointer" onclick="updateTimeline(7)">
+                    <div class="relative flex flex-col items-center">
+                        <span class="year-text text-3xl font-bold text-slate-300">2004</span>
+                        <div class="relative w-full flex items-center justify-center mt-6">
+                            <div class="h-[2px] bg-slate-200 w-full absolute"></div>
+                            <div class="dot w-4 h-4 rounded-full bg-slate-300 z-10 border-4 border-white"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+
+        <div id="timelineContent" class="mt-10 px-10 space-y-6">
+            <div class="animate-fadeIn">
+                <h3 class="text-2xl font-bold text-hota-green mb-4">1990/</h3>
+                <ul class="space-y-4 text-slate-600 list-disc pl-5">
+                    <li>動畫測試</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300 py-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-16">
+            <div>
+                <div class="text-lg font-semibold mb-4 text-white">COMPANY</div>
+                <p>確かな品質と信頼の専門サービスを提供します。</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">連絡先情報</h4>
+                <ul class="space-y-2 text-sm">
+                    <li>Tel: +886-2-1234-5678</li>
+                    <li>Email: service@company.com</li>
+                    <li>住所: 台北市某某区某某路 100 号</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">クイックリンク</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white">会社概要</a></li>
+                    <li><a href="#" class="hover:text-white">サービス</a></li>
+                    <li><a href="#" class="hover:text-white">お問い合わせ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-slate-700 text-center text-xs py-6 mt-16">
+            © 2026 COMPANY. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- 控制手機選單 -->
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+
+        function toggleMenu() {
+            const isOpen = mobileMenu.classList.contains('translate-x-0');
+            if (isOpen) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        }
+
+        function openMenu() {
+            mobileMenu.classList.remove('translate-x-full');
+            mobileMenu.classList.add('translate-x-0');
+            menuOverlay.classList.remove('hidden');
+            setTimeout(() => menuOverlay.classList.add('opacity-100'), 10);
+            document.body.style.overflow = 'hidden'; // 鎖定背景不捲動
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.remove('translate-x-0');
+            mobileMenu.classList.add('translate-x-full');
+            menuOverlay.classList.remove('opacity-100');
+            setTimeout(() => {
+                menuOverlay.classList.add('hidden');
+                document.body.style.overflow = ''; // 恢復捲動
+            }, 300);
+        }
+
+        // 監聽漢堡鈕
+        menuBtn.addEventListener('click', toggleMenu);
+        // 監聽遮罩 (點擊選單以外區域關閉)
+        menuOverlay.addEventListener('click', closeMenu);
+
+        // 子選單展開功能
+        function toggleMobileSub(menuId, arrowId) {
+            const subMenu = document.getElementById(menuId);
+            const arrowIcon = document.getElementById(arrowId);
+            if (subMenu) {
+                subMenu.classList.toggle('hidden');
+                if (arrowIcon) {
+                    arrowIcon.classList.toggle('rotate-180');
+                }
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!--  JS 效果 -->
+    <script>// 準備數據
+        const timelineData = [
+            { year: "1983", details: ["会社設立。"] },
+            { year: "1986", details: ["第 1 世代炭化ケイ素 (DC) 耐火物の発売。"] },
+            { year: "1989", details: ["第2世代炭化ケイ素（DSS）耐火物の発売。"] },
+            { year: "1992", details: ["コーディエライト（DR）耐火板を発売。"] },
+            { year: "1995", details: ["第 3 世代炭化ケイ素 (DD) 耐火物の発売。"] },
+            {
+                year: "1999", details: [
+                    "ISO9002認証取得。",
+                    "コンポジット（DS）サンドイッチプレートを発売。"
+                ]
+            },
+            { year: "2002", details: ["第4世代炭化ケイ素（DK）耐火物の発売。"] },
+            { year: "2003", details: ["ISO9001:2000認証取得。"] },
+            { year: "2004", details: ["事業規模と能力の拡大。"] }
+        ];
+
+        // 初始化 Swiper
+        const timelineSwiper = new Swiper(".timelineSwiper", {
+            slidesPerView: 3,
+            spaceBetween: 0,
+            centeredSlides: true,
+            loop: true, // 開啟循環模式
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                768: { slidesPerView: 5 }
+            },
+            on: {
+                // 初始載入時顯示第一筆
+                init: function () {
+                    // loop 模式下，索引值的處理稍有不同
+                    updateContent(this.realIndex);
+                },
+
+                // 滑動時更新內容
+                slideChange: function () {
+                    // 使用 realIndex 才能抓到循環中的正確資料索引
+                    updateContent(this.realIndex);
+                }
+            }
+        });
+
+        // 讓點擊年份也能切換 Swiper
+        document.querySelectorAll('.swiper-slide').forEach((slide) => {
+            slide.addEventListener('click', function () {
+                // 取得該 slide 在 swiper 中的索引並滑動
+                const index = parseInt(this.getAttribute('data-swiper-slide-index'));
+                timelineSwiper.slideToLoop(index);
+            });
+        });
+
+        function updateContent(index) {
+            const contentDiv = document.getElementById('timelineContent');
+            // 取得從 index 開始的連續三筆資料
+            // 因為有 loop，我們需要確保索引不會超出數組範圍
+            const displayItems = [];
+            for (let i = 0; i < 3; i++) {
+                const dataIndex = (index + i) % timelineData.length;
+                displayItems.push(timelineData[dataIndex]);
+            }
+
+            const fullHtml = displayItems.map(data => {
+                const listHtml = data.details.map(item => `<li>${item}</li>`).join('');
+                return `
+      <div class="animate-fadeIn border-l-2 border-hota-green/20 pl-6 mb-10 last:mb-0">
+        <h3 class="text-2xl font-bold text-hota-green mb-4">${data.year}/</h3>
+        <ul class="space-y-4 text-slate-600 list-disc pl-5">
+          ${listHtml}
+        </ul>
+      </div>
+      `;
+            }).join('');
+
+            contentDiv.innerHTML = fullHtml;
+        }
+    </script>
+
+</body>
+
+</html>

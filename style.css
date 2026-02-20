@@ -217,7 +217,7 @@
 /* 自定義背景動畫效果 */
 /* 自定義背景動畫效果 */
 .nav-hover-fill {
-  background: linear-gradient(to bottom, #2d6a4f 50%, transparent 50%);
+  background: linear-gradient(to bottom, #b4b6b5ef 50%, transparent 50%);
   background-size: 100% 200%;
   background-position: bottom;
   transition: background-position 0.4s ease;
