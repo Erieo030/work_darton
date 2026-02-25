@@ -92,21 +92,21 @@
 /* --- 公司簡介(年限輪轉) --- */
 /* 定義綠 (依據截圖) */
 .text-hota-green {
-  color: #006b35;
+  color: #ED7D11;
 }
 
 .bg-hota-green {
-  background-color: #006b35;
+  background-color: #ED7D11;
 }
 
 /* 選中狀態的樣式 */
 .swiper-slide-active .year-text {
-  color: #006b35 !important;
+  color: #ED7D11 !important;
   transform: scale(1.1);
 }
 
 .swiper-slide-active .dot {
-  background-color: #006b35 !important;
+  background-color: #ED7D11 !important;
   box-shadow: 0 0 0 4px rgba(0, 107, 53, 0.2);
 }
 
@@ -155,21 +155,21 @@
 
 /* 定義啟動狀態（當前年份）的顏色 */
 .swiper-slide-active .year-text {
-  color: #006b35 !important;
+  color: #ED7D11 !important;
   /* 綠 */
   transform: scale(1.2);
 }
 
 .swiper-slide-active .dot {
-  background-color: #006b35 !important;
-  border-color: #e2e8f0;
+  background-color: #ED7D11 !important;
+  border-color: #FFCF99;
   /* 淺灰外圈 */
   box-shadow: 0 0 0 4px rgba(0, 107, 51, 0.2);
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  border: 1px solid #d1d5db;
+  border: 1px solid #FFE7CC;
   /* 淺灰色邊框 */
   border-radius: 8px;
   /* 圓角 */
