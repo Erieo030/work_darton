@@ -36,44 +36,45 @@
       <nav class="hidden md:flex space-x-10 text-sm font-medium h-full items-center">
 
         <div class="group h-full flex items-center px-3 nav-hover-fill">
-          <a href="about.html" class="nav-link text-slate-700 hover:text-blue-600 transition flex items-center">
+          <a href="javascript:void(0);"
+            class="nav-link text-slate-700 hover:text-blue-600 transition flex items-center">
             <span class="nav-text relative h-full flex items-center">關於大度工業</span>
           </a>
 
           <div
-            class="absolute left-0 right-0 top-20 w-full bg-orange-600 text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 shadow-xl">
+            class="absolute left-0 right-0 top-20 w-full bg-[#ED7D11] text-white opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 shadow-xl [text-shadow:_0_2px_4px_rgba(0,0,0,0.6)]">
             <div class="max-w-7xl mx-auto px-10 py-12 grid grid-cols-4 gap-8">
 
-              <div class="border-l border-slate-900 pl-6">
-                <h4 class="font-bold mb-4 text-lg border-b border-slate-900 pb-2">大度工業</h4>
-                <ul class="space-y-3 text-slate-300">
-                  <li><a href="company.html" class="hover:text-white transition">公司簡介</a></li>
-                  <li><a href="#" class="hover:text-white transition">企業願景 ?</a></li>
-                  <li><a href="#" class="hover:text-white transition">核心競爭力 ?</a></li>
-                  <li><a href="#" class="hover:text-white transition">關係企業 ?</a></li>
+              <div class="border-l pl-6">
+                <h4 class="font-bold mb-4 text-lg border-b pb-2">大度工業</h4>
+                <ul class="space-y-3">
+                  <li><a href="company.html" class="hover:text-white/80 transition">公司簡介</a></li>
+                  <li><a href="#" class="hover:text-white/80 transition">企業願景 ?</a></li>
+                  <li><a href="#" class="hover:text-white/80 transition">核心競爭力 ?</a></li>
+                  <li><a href="#" class="hover:text-white/80 transition">關係企業 ?</a></li>
                 </ul>
               </div>
 
-              <div class="border-l border-slate-500 pl-6">
-                <h4 class="font-bold mb-4 text-lg border-b border-slate-500 pb-2">新聞中心</h4>
-                <ul class="space-y-3 text-slate-300">
+              <div class="border-l pl-6">
+                <h4 class="font-bold mb-4 text-lg border-b pb-2">新聞中心</h4>
+                <ul class="space-y-3">
                   <li><a href="#" class="hover:text-white transition">最新消息</a></li>
                   <li><a href="#" class="hover:text-white transition">常見問題</a></li>
                 </ul>
               </div>
 
-              <div class="border-l border-slate-500 pl-6">
-                <h4 class="font-bold mb-4 text-lg border-b border-slate-500 pb-2">永續經營 ?</h4>
-                <ul class="space-y-3 text-slate-300">
+              <div class="border-l  pl-6">
+                <h4 class="font-bold mb-4 text-lg border-b  pb-2">永續經營 ?</h4>
+                <ul class="space-y-3 ">
                   <li><a href="#" class="hover:text-white transition">ESG政策與目標 ?</a></li>
                   <li><a href="#" class="hover:text-white transition">環境保護與社會責任 ?</a></li>
                   <li><a href="#" class="hover:text-white transition">國際品質認證 ?</a></li>
                 </ul>
               </div>
 
-              <div class="border-l border-slate-500 pl-6">
-                <h4 class="font-bold mb-4 text-lg border-b border-slate-500 pb-2">全球據點 ?</h4>
-                <ul class="space-y-3 text-slate-300">
+              <div class="border-l  pl-6">
+                <h4 class="font-bold mb-4 text-lg border-b  pb-2">全球據點 ?</h4>
+                <ul class="space-y-3 ">
                   <li><a href="#" class="hover:text-white transition">全球佈局概況 ?</a></li>
                 </ul>
               </div>
@@ -83,7 +84,8 @@
         </div>
 
         <div class="group h-full flex items-center px-3 nav-hover-fill">
-          <a href="about.html" class="nav-link text-slate-700 hover:text-blue-600 transition flex items-center">
+          <a href="javascript:void(0);"
+            class="nav-link text-slate-700 hover:text-blue-600 transition flex items-center">
             <span class="nav-text relative h-full flex items-center">產品服務</span>
           </a>
 
@@ -178,9 +180,9 @@
             </svg>
           </button>
 
-          <div id="aboutContent" class="hidden pb-6 space-y-6 pl-4 border-l-2 border-hota-green/30">
+          <div id="aboutContent" class="hidden pb-6 space-y-6 pl-4">
             <div>
-              <p class="text-hota-green font-bold text-sm mb-2">xxx集團</p>
+              <p class="text-hota-green font-bold text-sm mb-2">大度工業</p>
               <ul class="space-y-3 text-slate-600">
                 <li><a href="company.html" class="block py-1">公司簡介</a></li>
                 <li><a href="#" class="block py-1">企業願景</a></li>
@@ -195,19 +197,34 @@
           </div>
         </div>
 
-        <a href="service.html" class="block py-4 text-lg font-bold text-slate-800 border-b border-gray-100">
-          產品服務
-        </a>
+        <div class="border-b border-gray-100">
+          <button onclick="toggleMobileSub('productsContent', 'productsArrow')"
+            class="flex items-center justify-between w-full py-4 text-lg font-bold text-slate-800">
+            產品服務
+            <svg id="productsArrow" class="w-5 h-5 transition-transform duration-300" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div id="productsContent" class="hidden pb-6 space-y-6 pl-4">
+            <div>
+              <p class="text-hota-green font-bold text-sm mb-2">製品系列組件</p>
+              <ul class="space-y-3 text-slate-600">
+                <li><a href="#" class="block py-1">碳化矽薄板製品系列</a></li>
+                <li><a href="#" class="block py-1">碳化矽製品系列</a></li>
+                <li><a href="#" class="block py-1">碳化矽異形製品系列</a></li>
+                <li><a href="#" class="block py-1">三明治製品系列</a></li>
+                <li><a href="#" class="block py-1">堇青石製品系列</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
         <a href="contact.html" class="block py-4 text-lg font-bold text-slate-800 border-b border-gray-100">
           聯絡我們
         </a>
       </nav>
-    </div>
-
-    <div id="menuOverlay"
-      class="fixed top-20 inset-0 bg-black/50 z-[55] hidden opacity-0 transition-opacity duration-300">
-    </div>
     </div>
 
     <div id="menuOverlay"
@@ -453,138 +470,11 @@
   </footer>
 
   <!-- 控制手機選單 -->
-  <script>
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const menuOverlay = document.getElementById('menuOverlay');
-
-    function toggleMenu() {
-      const isOpen = mobileMenu.classList.contains('translate-x-0');
-      if (isOpen) {
-        closeMenu();
-      } else {
-        openMenu();
-      }
-    }
-
-    function openMenu() {
-      mobileMenu.classList.remove('translate-x-full');
-      mobileMenu.classList.add('translate-x-0');
-      menuOverlay.classList.remove('hidden');
-      setTimeout(() => menuOverlay.classList.add('opacity-100'), 10);
-      document.body.style.overflow = 'hidden'; // 鎖定背景不捲動
-    }
-
-    function closeMenu() {
-      mobileMenu.classList.remove('translate-x-0');
-      mobileMenu.classList.add('translate-x-full');
-      menuOverlay.classList.remove('opacity-100');
-      setTimeout(() => {
-        menuOverlay.classList.add('hidden');
-        document.body.style.overflow = ''; // 恢復捲動
-      }, 300);
-    }
-
-    // 監聽漢堡鈕
-    menuBtn.addEventListener('click', toggleMenu);
-    // 監聽遮罩 (點擊選單以外區域關閉)
-    menuOverlay.addEventListener('click', closeMenu);
-
-    // 子選單展開功能
-    function toggleMobileSub(menuId, arrowId) {
-      const subMenu = document.getElementById(menuId);
-      const arrowIcon = document.getElementById(arrowId);
-      if (subMenu) {
-        subMenu.classList.toggle('hidden');
-        if (arrowIcon) {
-          arrowIcon.classList.toggle('rotate-180');
-        }
-      }
-    }
-  </script>
+  <script src="Control-phone-menu.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!--  JS 效果 -->
-  <script>// 準備數據
-    const timelineData = [
-      { year: "1983", details: ["公司創立。"] },
-      { year: "1986", details: ["第一代碳化矽(DC)耐火材推出。"] },
-      { year: "1989", details: ["第二代碳化矽(DSS)耐火材推出。"] },
-      { year: "1992", details: ["菫青石(DR)耐火板推出。"] },
-      { year: "1995", details: ["第三代碳化矽(DD)耐火材推出。"] },
-      {
-        year: "1999", details: [
-          "ISO 9002 國際品質保證系統認証通過。",
-          "第一代複合材料(DS)三明治耐火板推出。"
-        ]
-      },
-      { year: "2002", details: ["第四代碳化矽(DK)耐火材推出。"] },
-      { year: "2003", details: ["ISO 9001：2000國際品質保證系統認證通過研發創新，顧客滿意"] },
-      { year: "2004", details: ["擴大營業規模及產能。"] }
-    ];
-
-    // 初始化 Swiper
-    const timelineSwiper = new Swiper(".timelineSwiper", {
-      slidesPerView: 3,
-      spaceBetween: 0,
-      centeredSlides: true,
-      loop: true, // 開啟循環模式
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        768: { slidesPerView: 5 }
-      },
-      on: {
-        // 初始載入時顯示第一筆
-        init: function () {
-          // loop 模式下，索引值的處理稍有不同
-          updateContent(this.realIndex);
-        },
-
-        // 滑動時更新內容
-        slideChange: function () {
-          // 使用 realIndex 才能抓到循環中的正確資料索引
-          updateContent(this.realIndex);
-        }
-      }
-    });
-
-    // 讓點擊年份也能切換 Swiper
-    document.querySelectorAll('.swiper-slide').forEach((slide) => {
-      slide.addEventListener('click', function () {
-        // 取得該 slide 在 swiper 中的索引並滑動
-        const index = parseInt(this.getAttribute('data-swiper-slide-index'));
-        timelineSwiper.slideToLoop(index);
-      });
-    });
-
-    function updateContent(index) {
-      const contentDiv = document.getElementById('timelineContent');
-      // 取得從 index 開始的連續三筆資料
-      // 因為有 loop，我們需要確保索引不會超出數組範圍
-      const displayItems = [];
-      for (let i = 0; i < 3; i++) {
-        const dataIndex = (index + i) % timelineData.length;
-        displayItems.push(timelineData[dataIndex]);
-      }
-
-      const fullHtml = displayItems.map(data => {
-        const listHtml = data.details.map(item => `<li>${item}</li>`).join('');
-        return `
-      <div class="animate-fadeIn border-l-2 border-hota-green/20 pl-6 mb-10 last:mb-0">
-        <h3 class="text-2xl font-bold text-hota-green mb-4">${data.year}/</h3>
-        <ul class="space-y-4 text-slate-600 list-disc pl-5">
-          ${listHtml}
-        </ul>
-      </div>
-      `;
-      }).join('');
-
-      contentDiv.innerHTML = fullHtml;
-    }
-  </script>
+  <!-- timeline JS 效果 -->
+  <script src="timeline.js"></script>
 
 </body>
 
