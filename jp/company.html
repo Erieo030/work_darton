@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../tailwind-config.js"></script>
+    <script src="../js_db/tailwind-config.js"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../style.css">
@@ -27,8 +27,8 @@
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
 
             <!-- Logo -->
-            <a href="index.html" class="nav-link text-slate-700 hover:text-blue-600 transition font-bold text-xl">
-                COMPANY
+            <a href="index.html" class="flex items-center inline-block bg-gray-400 p-2 rounded-lg shadow-inner">
+                <img src="../assets/images/Logo.jpg" alt="Darton Industrial Logo" class="h-12 w-auto object-contain">
             </a>
 
             <!-- Desktop Nav -->
@@ -98,7 +98,8 @@
 
                             <div class="grid grid-cols-4 gap-8 pl-6">
                                 <ul class="space-y-3">
-                                    <li><a href="#" class="hover:text-white transition">碳化矽薄板製品系列</a></li>
+                                    <li><a href="product/product-01.html"
+                                            class="hover:text-white transition">碳化矽薄板製品系列</a></li>
                                     <li><a href="#" class="hover:text-white transition">碳化矽製品系列</a></li>
                                 </ul>
 
@@ -117,10 +118,14 @@
                     </div>
                 </div>
 
-                <div class="group h-full flex items-center px-3 nav-hover-fill">
-                    <a href="contact.html"
-                        class="nav-link text-slate-700 hover:text-blue-600 transition flex items-center">
-                        <span class="nav-text relative h-full flex items-center">お問い合わせ</span>
+                <div class="h-full flex items-center">
+                    <a href="contact.html" class="flex items-center transition" title="お問い合わせ">
+                        <svg class="h-7 w-7 text-slate-700 hover:text-orange-600 transition-colors"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                        </svg>
                     </a>
                 </div>
 
@@ -157,19 +162,9 @@
 
         <!-- Mobile Menu -->
         <div id="mobileMenu"
-            class="md:hidden fixed top-20 right-0 w-full bg-white shadow-2xl z-[60] transform translate-x-full transition-transform duration-300 ease-in-out h-[calc(100vh-80px)]">
-            <div class="px-6 py-4 bg-slate-50 border-b border-gray-100 flex items-center justify-between">
-                <span class="text-xs font-bold text-slate-400 tracking-widest uppercase">選擇語言</span>
-                <div class="py-6 flex space-x-4">
-                    <a href="../company.html" class="text-slate-400 font-bold">繁中</a>
-                    <span class="text-slate-300">|</span>
-                    <a href="../en/company.html" class="text-slate-400 font-bold">ENG</a>
-                    <span class="text-slate-300">|</span>
-                    <a href="company.html" class="text-slate-800 font-bold underline">JP</a>
-                </div>
-            </div>
+            class="md:hidden fixed top-20 right-0 w-full bg-white shadow-2xl z-[60] transform translate-x-full transition-transform duration-300 ease-in-out h-[calc(100vh-80px)] flex flex-col shadow-[inset_0_4px_6px_-1px_rgba(0,0,0,0.1)]">
 
-            <nav class="px-6 py-8 space-y-2 overflow-y-auto h-full">
+            <nav class="px-6 py-8 space-y-2 overflow-y-auto flex-1">
                 <div class="border-b border-gray-100">
                     <button onclick="toggleMobileSub('aboutContent', 'aboutArrow')"
                         class="flex items-center justify-between w-full py-4 text-lg font-bold text-slate-800">
@@ -211,7 +206,7 @@
                         <div>
                             <p class="text-hota-green font-bold text-sm mb-2">製品系列組件</p>
                             <ul class="space-y-3 text-slate-600">
-                                <li><a href="#" class="block py-1">碳化矽薄板製品系列</a></li>
+                                <li><a href="product/product-01.html" class="block py-1">碳化矽薄板製品系列</a></li>
                                 <li><a href="#" class="block py-1">碳化矽製品系列</a></li>
                                 <li><a href="#" class="block py-1">碳化矽異形製品系列</a></li>
                                 <li><a href="#" class="block py-1">三明治製品系列</a></li>
@@ -220,11 +215,31 @@
                         </div>
                     </div>
                 </div>
-
-                <a href="contact.html" class="block py-4 text-lg font-bold text-slate-800 border-b border-gray-100">
-                    聯絡我們
-                </a>
             </nav>
+
+            <div class="bg-slate-600 px-6 py-10">
+                <div class="flex items-center justify-center space-x-4 mb-8 text-white">
+                    <span class="text-slate-400">|</span>
+                    <a href="../company.html" class="text-slate-400 font-bold">繁中</a>
+                    <span class="text-slate-400">|</span>
+                    <a href="../en/company.html" class="text-slate-400 font-bold">ENG</a>
+                    <span class="text-slate-400">|</span>
+                    <a href="company.html" class="text-slate-100 font-bold underline">JP</a>
+                    <span class="text-slate-400">|</span>
+                </div>
+
+                <div class="flex justify-center">
+                    <a href="contact.html"
+                        class="inline-flex items-center justify-center px-10 py-3 bg-white text-slate-700 rounded-full text-lg font-bold shadow-lg hover:bg-slate-100 transition-all group">
+                        聯絡我們
+                        <svg class="w-6 h-6 ml-2 text-slate-500 group-hover:text-[#ED7D11] transition-colors"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
 
         <div id="menuOverlay"
@@ -274,7 +289,7 @@
                     </p>
                 </div>
                 <div class="md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80"
+                    <img src="../assets/images/IMG_2023.jpg"
                         class="rounded-lg shadow-2xl w-full" alt="Factory">
                 </div>
             </div>
@@ -438,37 +453,81 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-300 py-20">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-16">
-            <div>
-                <div class="text-lg font-semibold mb-4 text-white">COMPANY</div>
-                <p>確かな品質と信頼の専門サービスを提供します。</p>
-            </div>
-            <div>
-                <h4 class="text-white font-semibold mb-4">連絡先情報</h4>
-                <ul class="space-y-2 text-sm">
-                    <li>電話番号: +886-3-380-1579</li>
-                    <li>ファックス: +886-3-380-9757</li>
-                    <li>メールアドレス: darton@ms14.hinet.net</li>
-                    <li>住所：桃園市大渓区大英路1401巷31号</li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white font-semibold mb-4">クイックリンク</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-white">会社概要</a></li>
-                    <li><a href="#" class="hover:text-white">サービス</a></li>
-                    <li><a href="#" class="hover:text-white">お問い合わせ</a></li>
-                </ul>
+    <footer class="bg-slate-900 text-slate-300">
+        <div class="max-w-7xl mx-auto px-6 py-20">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-16 items-start">
+
+                <div class="md:col-span-5 space-y-6">
+                    <div class="inline-block bg-white p-2 rounded-lg shadow-inner">
+                        <img src="../assets/images/Logo.jpg" alt="Darton Industrial Logo"
+                            class="h-14 w-auto object-contain">
+                    </div>
+                    <p class="leading-relaxed text-slate-400 max-w-sm text-base">
+                        確かな品質と信頼の専門サービスを提供します。
+                    </p>
+                </div>
+
+                <div class="md:col-span-4">
+                    <h4
+                        class="text-white font-bold text-lg mb-6 tracking-wide border-b border-slate-700 pb-2 inline-block">
+                        連絡先情報
+                    </h4>
+                    <ul class="space-y-4 text-slate-400">
+                        <li class="flex items-start gap-3">
+                            <span class="font-bold">電話番号：</span>
+                            <span>+886-3-380-1579</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="font-bold">ファックス：</span>
+                            <span>+886-3-380-9757</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="font-bold">メールアドレス：</span>
+                            <span class="break-all">darton@ms14.hinet.net</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="font-bold shrink-0">住所：</span>
+                            <span>桃園市大溪区大英路1401巷31号</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-3">
+                    <h4
+                        class="text-white font-bold text-lg mb-6 tracking-wide border-b border-slate-700 pb-2 inline-block">
+                        クイックリンク
+                    </h4>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="#" class="hover:text-orange-500 transition-colors flex items-center gap-2">
+                                <span class="text-[10px]">▶</span> 会社概要
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:text-orange-500 transition-colors flex items-center gap-2">
+                                <span class="text-[10px]">▶</span> サービス
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html"
+                                class="hover:text-orange-500 transition-colors flex items-center gap-2">
+                                <span class="text-[10px]">▶</span> お問い合わせ
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="border-t border-slate-700 text-center text-xs py-6 mt-16">
-            © 2026 COMPANY. All rights reserved.
+
+        <div class="border-t border-slate-800 bg-slate-950">
+            <div class="max-w-7xl mx-auto px-6 py-8 text-center text-xs text-slate-500 tracking-widest">
+                © 2026 DARTON INDUSTRIAL CO., LTD. All rights reserved.
+            </div>
         </div>
     </footer>
 
     <!-- 控制手機選單 -->
-    <script src="../Control-phone-menu.js"></script>
+    <script src="../js_db/control-phone-menu.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- timeline JS 效果 -->
